@@ -1,5 +1,6 @@
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import { Navbar, Footer } from "@/components/Layout";
 
 const ubuntu = Ubuntu({
 	weight: ["300", "400", "500", "700"],
@@ -19,7 +20,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={`${ubuntu.className} dark`}>{children}</body>
+			<body className={`${ubuntu.className}`}>
+				<Navbar />
+				{children}
+				<Footer />
+			</body>
 		</html>
 	);
 }
