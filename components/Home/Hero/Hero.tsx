@@ -3,7 +3,10 @@ import development from "@/public/lotties/developer_skills.json";
 
 const Hero = () => {
 	return (
-		<section className="min-h-screen text-center lg:text-left flex flex-col lg:flex-row items-center justify-center">
+		<section
+			id="home"
+			className="min-h-screen text-center lg:text-left flex flex-col lg:flex-row items-center justify-center"
+		>
 			<div className="w-72 h-72 lg:w-96 lg:h-96">
 				<LottieImage animationData={development} />
 			</div>
