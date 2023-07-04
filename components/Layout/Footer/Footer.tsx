@@ -10,11 +10,6 @@ const Footer = () => {
 					©2023 Tamer Hayek. All rights reserved.
 				</h3>
 				<div className="flex gap-5 pb-5">
-					<Link href={"/privacy-policy"}>Privacy Policy</Link>
-					{" - "}
-					<Link href={"/cookie-policy"}>Cookie Policy</Link>
-				</div>
-				<div className="flex gap-5 pb-5">
 					<Link href={"mailto:dev@tamerhayek.com"}>
 						<MdEmail className="w-7 h-7" />
 					</Link>

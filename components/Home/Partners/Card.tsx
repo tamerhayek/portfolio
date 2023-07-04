@@ -8,7 +8,7 @@ interface Props {
 
 const Card = ({ name, image, href }: Props) => {
 	return (
-		<div>
+		<div className="mx-5">
 			<Image
 				src={image}
 				alt={name}
