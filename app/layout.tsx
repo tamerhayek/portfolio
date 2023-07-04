@@ -1,6 +1,8 @@
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
 import { Navbar, Footer, Banner } from "@/components/Layout";
+import Head from "next/head";
+import Script from "next/script";
 
 const ubuntu = Ubuntu({
 	weight: ["300", "400", "500", "700"],
@@ -23,8 +25,8 @@ export const metadata = {
 		},
 	],
 	category: "Web Development",
-	creator: "Tamer Hayek",
-	publisher: "Tamer Hayek",
+	creator: "@tamerhayek",
+	publisher: "Vercel",
 	themeColor: "slate",
 	colorScheme: "dark",
 	keywords: [
@@ -48,6 +50,24 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
+			<Head>
+				<Script
+					id="oil-configuration"
+					type="application/configuration"
+					data-remote-config="https://tamer-hayek.avacy-cdn.com/config/tamer-hayek/006144a6-009a-4a62-9a91-1a790165a355/banner.json"
+					strategy="beforeInteractive"
+				>
+					{" "}
+				</Script>{" "}
+				<Script
+					src="https://tamer-hayek.avacy-cdn.com/current/dist/oil.min.js"
+					strategy="beforeInteractive"
+				></Script>{" "}
+				<Script
+					src="https://tamer-hayek.avacy-cdn.com/current/dist/oilstub.min.js"
+					strategy="beforeInteractive"
+				></Script>
+			</Head>
 			<body className={`${ubuntu.className}`}>
 				<Banner />
 				<Navbar />
