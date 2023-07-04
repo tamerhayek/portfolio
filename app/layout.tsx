@@ -1,4 +1,4 @@
-import { Banner, CookiePolicy, Footer, Navbar } from "@/components/Layout";
+import { Banner, Footer, Navbar } from "@/components/Layout";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
 
@@ -69,7 +69,6 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<CookiePolicy />
 			<body className={`${ubuntu.className}`}>
 				<Banner />
 				<Navbar />
