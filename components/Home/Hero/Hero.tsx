@@ -1,5 +1,5 @@
 import LottieImage from "@/components/ui/LottieImage";
-import development from "@/public/lotties/developer_skills.json";
+import developer_skills from "@/public/lotties/developer_skills.json";
 
 const Hero = () => {
 	return (
@@ -8,7 +8,7 @@ const Hero = () => {
 			className="min-h-screen text-center lg:text-left flex flex-col lg:flex-row items-center justify-center"
 		>
 			<div className="w-72 h-72 lg:w-96 lg:h-96">
-				<LottieImage animationData={development} />
+				<LottieImage animationData={developer_skills} />
 			</div>
 			<div className="py-3 lg:p-10">
 				<h1 className="text-4xl py-2 text-teal-300 font-bold lg:text-6xl">

@@ -1,5 +1,5 @@
 import LottieImage from "@/components/ui/LottieImage";
-import development from "@/public/lotties/app_development.json";
+import app_development from "@/public/lotties/app_development.json";
 import StackIcons from "./StackIcons";
 
 const Services = () => {
@@ -16,7 +16,7 @@ const Services = () => {
 				<StackIcons />
 			</div>
 			<div className="w-72 h-72 lg:w-96 lg:h-96 order-1 lg:order-2">
-				<LottieImage animationData={development} />
+				<LottieImage animationData={app_development} />
 			</div>
 		</section>
 	);
