@@ -1,8 +1,6 @@
+import { Banner, CookiePolicy, Footer, Navbar } from "@/components/Layout";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
-import { Navbar, Footer, Banner } from "@/components/Layout";
-import Head from "next/head";
-import Script from "next/script";
 
 const ubuntu = Ubuntu({
 	weight: ["300", "400", "500", "700"],
@@ -18,14 +16,15 @@ export const metadata = {
 		follow: true,
 		nocache: true,
 	},
+	metadataBase: new URL("https://tamerhayek.com"),
 	authors: [
 		{
-			name: "Tamer Hayek",
+			name: "Tamer",
 			url: "https://tamerhayek.com",
 		},
 	],
 	category: "Web Development",
-	creator: "@tamerhayek",
+	creator: "Tamer Hayek",
 	publisher: "Vercel",
 	themeColor: "slate",
 	colorScheme: "dark",
@@ -41,6 +40,26 @@ export const metadata = {
 		"JavaScript",
 		"Node.js",
 	],
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
+	openGraph: {
+		title: "Tamer Hayek | Portfolio",
+		description:
+			"I'm a full-stack web developer with a passion for technology and I am dedicated to creating innovative and user-friendly digital experiences.",
+		type: "website",
+		publishedTime: "2023-07-03T00:00:00.000Z",
+		authors: ["Tamer"],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Tamer Hayek",
+		description:
+			"I'm a full-stack web developer with a passion for technology and I am dedicated to creating innovative and user-friendly digital experiences.",
+		creator: "@tamibyte",
+	},
 };
 
 export default function RootLayout({
@@ -50,24 +69,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<Head>
-				<Script
-					id="oil-configuration"
-					type="application/configuration"
-					data-remote-config="https://tamer-hayek.avacy-cdn.com/config/tamer-hayek/006144a6-009a-4a62-9a91-1a790165a355/banner.json"
-					strategy="beforeInteractive"
-				>
-					{" "}
-				</Script>{" "}
-				<Script
-					src="https://tamer-hayek.avacy-cdn.com/current/dist/oil.min.js"
-					strategy="beforeInteractive"
-				></Script>{" "}
-				<Script
-					src="https://tamer-hayek.avacy-cdn.com/current/dist/oilstub.min.js"
-					strategy="beforeInteractive"
-				></Script>
-			</Head>
+			<CookiePolicy />
 			<body className={`${ubuntu.className}`}>
 				<Banner />
 				<Navbar />
