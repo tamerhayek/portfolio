@@ -23,7 +23,9 @@ export default function RootLayout({
 			<body className={`${ubuntu.className}`}>
 				<Banner />
 				<Navbar />
-				{children}
+				<main className="flex flex-col items-center px-5">
+					{children}
+				</main>
 				<Footer />
 			</body>
 		</html>

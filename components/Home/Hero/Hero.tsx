@@ -5,7 +5,7 @@ const Hero = () => {
 	return (
 		<section
 			id="home"
-			className="min-h-screen text-center lg:text-left flex flex-col lg:flex-row items-center justify-center"
+			className="min-h-screen pt-[120px] text-center lg:text-left flex flex-col lg:flex-row items-center justify-center"
 		>
 			<div className="w-72 h-72 lg:w-96 lg:h-96">
 				<LottieImage animationData={developer_skills} />
