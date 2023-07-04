@@ -1,5 +1,6 @@
 import {
 	Hero,
+	Partners,
 	Portfolio,
 	Stack,
 	Testimonials,
@@ -13,6 +14,7 @@ const HomePage = () => {
 			<Stack />
 			<Timeline />
 			<Testimonials />
+			<Partners />
 			<Portfolio />
 		</main>
 	);
