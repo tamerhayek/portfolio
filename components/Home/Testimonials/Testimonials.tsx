@@ -33,7 +33,7 @@ const Testimonials = () => {
 				<h3 className="text-center text-4xl font-bold tracking-tight sm:text-5xl">
 					Read trusted reviews from my customers
 				</h3>
-				<Slider {...settings} className="py-10">
+				<Slider {...settings} className="py-10 overflow-hidden">
 					{testimonials.map((review, index) => (
 						<Review key={index} {...review} />
 					))}

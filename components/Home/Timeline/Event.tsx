@@ -43,7 +43,7 @@ const Event = ({
 			</p>
 			{href && linkName && (
 				<Link
-					href="#"
+					href={href}
 					className="inline-flex items-center px-5 py-2 text-sm font-medium bg-teal-600 text-gray-100  hover:text-white hover:bg-teal-900 rounded-2xl"
 				>
 					<BsLink45Deg className="mr-2 w-4 h-4" />

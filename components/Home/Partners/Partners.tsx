@@ -9,9 +9,9 @@ const Partners = () => {
 	const settings = {
 		dots: false,
 		infinite: true,
-		speed: 10000,
+		speed: 2000,
 		slidesToShow: 3,
-		slidesToScroll: 3,
+		slidesToScroll: 1,
 		rtl: true,
 		autoplay: true,
 		autoplaySpeed: 0,
@@ -24,7 +24,7 @@ const Partners = () => {
 				<h3 className="text-center text-4xl font-bold tracking-tight sm:text-5xl">
 					Partners
 				</h3>
-				<Slider {...settings} className="py-10">
+				<Slider {...settings} className="py-10 overflow-hidden">
 					{partners.map((partner, index) => (
 						<Card key={index} {...partner} />
 					))}

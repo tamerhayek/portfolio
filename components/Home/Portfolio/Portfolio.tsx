@@ -10,7 +10,7 @@ const Portfolio = () => {
 			<h3 className="text-center text-4xl font-bold tracking-tight sm:text-5xl">
 				Showroom
 			</h3>
-			<div className="flex flex-wrap gap-10 py-10 lg:px-5 justify-center items-stretch">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10 px-3">
 				{portfolio.map((card) => (
 					<Card {...card} />
 				))}

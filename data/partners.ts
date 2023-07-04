@@ -1,25 +1,40 @@
-import avatar from "@/public/images/avatar.png";
+import olymposhub from "@/public/images/partners/olymposhub.png";
 
 export default [
 	{
-		name: "Partner",
-		image: avatar,
+		name: "Olympos Hub",
+		image: olymposhub,
+		href: "https://olymposhub.io",
 	},
 	{
-		name: "Partner",
-		image: avatar,
+		name: "Olympos Hub",
+		image: olymposhub,
+		href: "https://olymposhub.io",
 	},
 	{
-		name: "Partner",
-		image: avatar,
+		name: "Olympos Hub",
+		image: olymposhub,
+		href: "https://olymposhub.io",
 	},
 	{
-		name: "Partner",
-		image: avatar,
+		name: "Olympos Hub",
+		image: olymposhub,
+		href: "https://olymposhub.io",
 	},
 	{
-		name: "Partner",
-		image: avatar,
+		name: "Olympos Hub",
+		image: olymposhub,
+		href: "https://olymposhub.io",
+	},
+	{
+		name: "Olympos Hub",
+		image: olymposhub,
+		href: "https://olymposhub.io",
+	},
+	{
+		name: "Olympos Hub",
+		image: olymposhub,
+		href: "https://olymposhub.io",
 	},
 ];
 

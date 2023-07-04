@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
 import { BiCodeAlt, BiX } from "react-icons/bi";
+import banner from "@/data/banner";
 
 const Banner = () => {
-	const [isBannerOpen, setIsBannerOpen] = useState(true);
+	const [isBannerOpen, setIsBannerOpen] = useState(banner.isOpen);
 
 	if (!isBannerOpen) return null;
 
@@ -16,7 +17,7 @@ const Banner = () => {
 			<div className="flex items-center mx-auto">
 				<p className="flex items-center text-sm font-normal text-gray-100">
 					<BiCodeAlt className="w-6 h-6 mr-3" />
-					<span>New project</span>
+					<span>{banner.text}</span>
 				</p>
 			</div>
 			<button

@@ -15,7 +15,7 @@ const Card = ({ alt, image, title, description, href, skills }: Props) => {
 	return (
 		<Link
 			href={href}
-			className="lg:max-w-md max-w-xl rounded-3xl overflow-auto cursor-pointer hover:scale-105 transition-transform bg-slate-800"
+			className=" rounded-3xl overflow-auto cursor-pointer hover:scale-105 transition-transform bg-slate-800"
 		>
 			<Image
 				src={image}
