@@ -5,6 +5,9 @@ import {
 	SiTypescript,
 	SiNextdotjs,
 	SiTailwindcss,
+	SiNodedotjs,
+	SiPostgresql,
+	SiMongodb,
 } from "react-icons/si";
 import Link from "next/link";
 
@@ -27,6 +30,15 @@ const StackIcons = () => {
 					href="https://tailwindcss.com/"
 				>
 					<SiTailwindcss className="cursor-pointer w-10 h-10 transition-colors fill-gray-400 hover:fill-blue-400" />
+				</Link>
+				<Link className="cursor-pointer" href="https://nodejs.org">
+					<SiNodedotjs className="cursor-pointer w-10 h-10 transition-colors fill-gray-400 hover:fill-green-500" />
+				</Link>
+				<Link className="cursor-pointer" href="https://postgresql.org">
+					<SiPostgresql className="cursor-pointer w-10 h-10 transition-colors fill-gray-400 hover:fill-blue-600" />
+				</Link>
+				<Link className="cursor-pointer" href="https://mongodb.com/">
+					<SiMongodb className="cursor-pointer w-10 h-10 transition-colors fill-gray-400 hover:fill-green-600" />
 				</Link>
 			</div>
 		</>

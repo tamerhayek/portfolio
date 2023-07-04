@@ -5,8 +5,8 @@ import StackIcons from "./StackIcons";
 const Services = () => {
 	return (
 		<section className="min-h-screen text-center lg:text-right flex flex-col items-center justify-center lg:flex-row gap-5">
-			<div className="order-2 lg:order-1 flex flex-col items-center">
-				<h3 className="text-gray-300 max-w-md text-xl">
+			<div className="order-2 lg:order-1 flex flex-col items-center max-w-md">
+				<h3 className="text-gray-300  text-xl">
 					Capable of building web applications from scratch using
 					various programming languages, frameworks, and libraries.
 				</h3>

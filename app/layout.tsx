@@ -1,6 +1,6 @@
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
-import { Navbar, Footer } from "@/components/Layout";
+import { Navbar, Footer, Banner } from "@/components/Layout";
 
 const ubuntu = Ubuntu({
 	weight: ["300", "400", "500", "700"],
@@ -21,6 +21,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${ubuntu.className}`}>
+				<Banner />
 				<Navbar />
 				{children}
 				<Footer />
