@@ -39,40 +39,6 @@ export const metadata = {
 		"JavaScript",
 		"Node.js",
 	],
-	twitter: {
-		card: "summary_large_image",
-		title: "Tamer Hayek | Portfolio",
-		description:
-			"I'm a full-stack web developer with a passion for technology and I am dedicated to creating innovative and user-friendly digital experiences.",
-		creator: "@tamibyte",
-		images: [
-			"https://tamerhayek.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.0e658748.png&w=640&q=75&dpl=dpl_EhT63S9gtwZrXL69cewxKCdTP66x",
-			"https://tamerhayek.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.0654bf31.png&w=1080&q=75&dpl=dpl_EhT63S9gtwZrXL69cewxKCdTP66x",
-			,
-		],
-	},
-	openGraph: {
-		type: "website",
-		title: "Tamer Hayek | Portfolio",
-		description:
-			"I'm a full-stack web developer with a passion for technology and I am dedicated to creating innovative and user-friendly digital experiences.",
-		url: "https://tamerhayek.com",
-		siteName: "Tamer Hayek | Portfolio",
-		images: [
-			{
-				url: "https://tamerhayek.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.0e658748.png&w=640&q=75&dpl=dpl_EhT63S9gtwZrXL69cewxKCdTP66x",
-				width: 800,
-				height: 600,
-				alt: "Tamer Hayek Avatar",
-			},
-			{
-				url: "https://tamerhayek.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.0654bf31.png&w=1080&q=75&dpl=dpl_EhT63S9gtwZrXL69cewxKCdTP66x",
-				width: 800,
-				height: 600,
-				alt: "Tamer Hayek Portrait",
-			},
-		],
-	},
 };
 
 export default function RootLayout({
