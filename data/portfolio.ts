@@ -7,6 +7,7 @@ export default [
 		image: project,
 		alt: "Sample Project",
 		href: "#",
+		skills: ["HTML5", "CSS3", "JavaScript", "React"],
 	},
 	{
 		title: "Sample Project",
@@ -14,6 +15,7 @@ export default [
 		image: project,
 		alt: "Sample Project",
 		href: "#",
+		skills: ["HTML5", "CSS3", "JavaScript", "React"],
 	},
 	{
 		title: "Sample Project",
@@ -21,6 +23,7 @@ export default [
 		image: project,
 		alt: "Sample Project",
 		href: "#",
+		skills: ["HTML5", "CSS3", "JavaScript", "React"],
 	},
 	{
 		title: "Sample Project",
@@ -28,6 +31,7 @@ export default [
 		image: project,
 		alt: "Sample Project",
 		href: "#",
+		skills: ["HTML5", "CSS3", "JavaScript", "React"],
 	},
 ];
 
