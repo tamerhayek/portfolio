@@ -5,7 +5,7 @@ import Link from "next/link";
 const SocialIcons = () => {
 	return (
 		<>
-			<div className="flex justify-center lg:justify-start gap-5 py-5">
+			<div className="flex justify-center lg:justify-start gap-5">
 				<Link
 					className="cursor-pointer"
 					href="https://www.linkedin.com/in/tamerhayek/"

@@ -14,7 +14,7 @@ const HomePage = () => {
 			<Stack />
 			<Timeline />
 			{/* <Testimonials /> */}
-			<Partners />
+			{/* <Partners /> */}
 			<Portfolio />
 		</>
 	);
