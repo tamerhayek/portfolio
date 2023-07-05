@@ -9,7 +9,14 @@ export default [
 		image: portfolio,
 		alt: "Personal Portfolio Project",
 		href: "/",
-		skills: ["HTML5", "CSS3", "Typescript", "React", "Next", "TailwindCSS"],
+		skills: [
+			"HTML5",
+			"CSS3",
+			"Typescript",
+			"React",
+			"Next.js",
+			"TailwindCSS",
+		],
 	},
 	{
 		title: "Olympos Hub",
@@ -25,7 +32,7 @@ export default [
 		image: gamehub,
 		alt: "Game Hub Personal Project",
 		href: "https://game-hub-tamerhayek.netlify.app/",
-		skills: ["HTML5", "CSS3", "Typescript", "React"],
+		skills: ["HTML5", "CSS3", "Typescript", "React", "ChakraUI"],
 	},
 ];
 
