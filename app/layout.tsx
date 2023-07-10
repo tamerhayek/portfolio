@@ -2,6 +2,7 @@ import { Banner, Footer, Navbar } from "@/components/Layout";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 const ubuntu = Ubuntu({
 	weight: ["300", "400", "500", "700"],
@@ -85,6 +86,7 @@ export default function RootLayout({
 				</main>
 				<Footer />
 			</body>
+			<Analytics />
 		</html>
 	);
 }
