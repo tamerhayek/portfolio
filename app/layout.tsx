@@ -1,6 +1,7 @@
 import { Banner, Footer, Navbar } from "@/components/Layout";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const ubuntu = Ubuntu({
 	weight: ["300", "400", "500", "700"],
@@ -69,6 +70,13 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
+			<Script
+				id="oil-configuration"
+				type="application/configuration"
+				data-remote-config="https://tamer-hayek.avacy-cdn.com/config/tamer-hayek/2f674c92-bf32-44f6-be5a-66f80bb56ac8/banner.json"
+			></Script>
+			<Script src="https://tamer-hayek.avacy-cdn.com/current/dist/oil.min.js"></Script>
+			<Script src="https://tamer-hayek.avacy-cdn.com/current/dist/oilstub.min.js"></Script>
 			<body className={`${ubuntu.className}`}>
 				<Banner />
 				<Navbar />
