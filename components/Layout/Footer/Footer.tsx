@@ -11,12 +11,8 @@ const Footer = () => {
 					©2023 Tamer Hayek. All rights reserved.
 				</h3>
 				<div className="flex gap-5">
-					<Link href="https://www.iubenda.com/privacy-policy/50764582">
-						Privacy Policy
-					</Link>
-					<Link href="https://www.iubenda.com/privacy-policy/50764582/cookie-policy">
-						Cookie Policy
-					</Link>
+					<Link href="#">Privacy Policy</Link>
+					<Link href="#">Cookie Policy</Link>
 				</div>
 				<div className="flex gap-10 pb-5">
 					<Link href={"mailto:dev@tamerhayek.com"}>

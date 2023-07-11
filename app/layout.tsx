@@ -77,23 +77,6 @@ export default function RootLayout({
 					{children}
 				</main>
 				<Footer />
-
-				<Script
-					type="text/javascript"
-					src="/js/iubenda.js"
-					strategy="beforeInteractive"
-				></Script>
-				<Script
-					type="text/javascript"
-					src="//cdn.iubenda.com/cs/gpp/stub.js"
-					strategy="beforeInteractive"
-				></Script>
-				<Script
-					type="text/javascript"
-					src="//cdn.iubenda.com/cs/iubenda_cs.js"
-					async
-					strategy="beforeInteractive"
-				></Script>
 			</body>
 		</html>
 	);
