@@ -10,4 +10,3 @@ const LottieImage = ({ animationData }: Props) => {
 };
 
 export default LottieImage;
-

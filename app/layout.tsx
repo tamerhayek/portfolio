@@ -1,7 +1,6 @@
-import { Banner, Footer, Navbar } from "@/components/Layout";
+import { Footer, Navbar } from "@/components/Layout";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 
 const ubuntu = Ubuntu({
 	weight: ["300", "400", "500", "700"],
@@ -17,18 +16,10 @@ export const metadata = {
 		follow: true,
 		nocache: true,
 	},
-	metadataBase: new URL("https://tamerhayek.com"),
-	authors: [
-		{
-			name: "Tamer",
-			url: "https://tamerhayek.com",
-		},
-	],
+	metadataBase: new URL("https://tamerhayek.com/"),
 	category: "Web Development",
 	creator: "Tamer Hayek",
 	publisher: "Vercel",
-	themeColor: "slate",
-	colorScheme: "dark",
 	keywords: [
 		"Fullstack Developer",
 		"Web Developer",
@@ -41,13 +32,9 @@ export const metadata = {
 		"JavaScript",
 		"Node.js",
 	],
-	formatDetection: {
-		email: false,
-		address: false,
-		telephone: false,
-	},
 	openGraph: {
 		title: "Tamer Hayek | Portfolio",
+		image: "https://tamerhayek.com/images/portrait.png",
 		description:
 			"I'm a full-stack web developer with a passion for technology and I am dedicated to creating innovative and user-friendly digital experiences.",
 		type: "website",
@@ -56,7 +43,8 @@ export const metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Tamer Hayek",
+		image: "https://tamerhayek.com/images/portrait.png",
+		title: "Tamer Hayek | Portfolio",
 		description:
 			"I'm a full-stack web developer with a passion for technology and I am dedicated to creating innovative and user-friendly digital experiences.",
 		creator: "@tamibyte",
@@ -71,7 +59,6 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${ubuntu.className}`}>
-				<Banner />
 				<Navbar />
 				<main className="flex flex-col items-center px-5">
 					{children}

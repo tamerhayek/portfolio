@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Script from "next/script";
 import { MdEmail } from "react-icons/md";
 import { SiTelegram, SiDiscord } from "react-icons/si";
 
@@ -11,8 +10,18 @@ const Footer = () => {
 					©2023 Tamer Hayek. All rights reserved.
 				</h3>
 				<div className="flex gap-5">
-					<Link href="#">Privacy Policy</Link>
-					<Link href="#">Cookie Policy</Link>
+					<Link
+						href="https://www.iubenda.com/privacy-policy/93742890"
+						title="Privacy Policy"
+					>
+						Privacy Policy
+					</Link>
+					<Link
+						href="https://www.iubenda.com/privacy-policy/93742890/cookie-policy"
+						title="Cookie Policy"
+					>
+						Cookie Policy
+					</Link>
 				</div>
 				<div className="flex gap-10 pb-5">
 					<Link href={"mailto:dev@tamerhayek.com"}>
@@ -20,9 +29,6 @@ const Footer = () => {
 					</Link>
 					<Link href={"https://t.me/tamibyte"}>
 						<SiTelegram className="w-7 h-7 xl:w-10 xl:h-10 hover:scale-110 transition-all" />
-					</Link>
-					<Link href={"https://discord.com/channels/tamibyte"}>
-						<SiDiscord className="w-7 h-7 xl:w-10 xl:h-10 hover:scale-110 transition-all" />
 					</Link>
 				</div>
 			</div>

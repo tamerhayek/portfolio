@@ -1,6 +1,17 @@
-import HomePage from "../pages/HomePage";
+import { Hero, Portfolio, Stack, Timeline } from "@/components/Home/";
 
-export default function Home() {
-	return <HomePage />;
-}
+const HomePage = () => {
+	return (
+		<>
+			<Hero />
+			<Stack />
+			<Timeline />
+			{/* <Testimonials /> */}
+			{/* <Partners /> */}
+			<Portfolio />
+		</>
+	);
+};
+
+export default HomePage;
 
