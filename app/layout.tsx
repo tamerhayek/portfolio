@@ -34,7 +34,7 @@ export const metadata = {
 	],
 	openGraph: {
 		title: "Tamer Hayek | Portfolio",
-		image: "https://tamerhayek.com/images/portrait.png",
+		image: "https://tamerhayek.com/images/projects/portfolio.png",
 		description:
 			"I'm a full-stack web developer with a passion for technology and I am dedicated to creating innovative and user-friendly digital experiences.",
 		type: "website",
@@ -43,7 +43,7 @@ export const metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		image: "https://tamerhayek.com/images/portrait.png",
+		image: "https://tamerhayek.com/images/projects/portfolio.png",
 		title: "Tamer Hayek | Portfolio",
 		description:
 			"I'm a full-stack web developer with a passion for technology and I am dedicated to creating innovative and user-friendly digital experiences.",
