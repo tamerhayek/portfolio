@@ -1,4 +1,5 @@
 import { Footer, Navbar } from "@/components/Layout";
+import { Analytics } from "@vercel/analytics/react";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
 
@@ -64,6 +65,7 @@ export default function RootLayout({
 					{children}
 				</main>
 				<Footer />
+				<Analytics />
 			</body>
 		</html>
 	);
