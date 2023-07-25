@@ -1,5 +1,5 @@
 import SocialIcons from "@/components/ui/SocialIcons";
-import avatar from "@/public/images/avatar.png";
+import avatar from "@/public/avatar.png";
 import Image from "next/image";
 import Link from "next/link";
 

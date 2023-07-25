@@ -1,5 +1,6 @@
 import { Footer, Navbar } from "@/components/Layout";
 import { Analytics } from "@vercel/analytics/react";
+import { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
 
@@ -8,19 +9,14 @@ const ubuntu = Ubuntu({
 	subsets: ["latin"],
 });
 
-export const metadata = {
-	title: "Tamer Hayek | Portfolio",
+export const metadata: Metadata = {
+	metadataBase: new URL("https://tamerhayek.com/"),
+	title: "Tamer Hayek",
 	description:
 		"I'm a full-stack web developer with a passion for technology and I am dedicated to creating innovative and user-friendly digital experiences.",
-	robots: {
-		index: true,
-		follow: true,
-		nocache: true,
-	},
-	metadataBase: new URL("https://tamerhayek.com/"),
-	category: "Web Development",
-	creator: "Tamer Hayek",
-	publisher: "Vercel",
+	applicationName: "Tamer Hayek | Portfolio",
+	authors: [{ name: "Tamer" }],
+	generator: "Next.js",
 	keywords: [
 		"Fullstack Developer",
 		"Web Developer",
@@ -33,18 +29,54 @@ export const metadata = {
 		"JavaScript",
 		"Node.js",
 	],
+	themeColor: "#020817",
+	colorScheme: "dark",
+	creator: "Tamer Hayek",
+	publisher: "Vercel",
+	robots: {
+		index: true,
+		follow: true,
+		nocache: true,
+	},
+	icons: [
+		{
+			rel: "icon",
+			sizes: "16x16",
+			url: "/favicon-16x16.png",
+		},
+		{
+			rel: "icon",
+			sizes: "32x32",
+			url: "/favicon-32x32.png",
+		},
+		{
+			rel: "apple-touch-icon",
+			sizes: "180x180",
+			url: "/apple-touch-icon.png",
+		},
+		{
+			rel: "manifest",
+			url: "/site.webmanifest",
+		},
+		{
+			rel: "mask-icon",
+			url: "/safari-pinned-tab.svg",
+		},
+	],
+	category: "Web Development",
 	openGraph: {
 		title: "Tamer Hayek | Portfolio",
-		image: "https://tamerhayek.com/images/avatar.png",
 		description:
 			"I'm a full-stack web developer with a passion for technology and I am dedicated to creating innovative and user-friendly digital experiences.",
+		emails: ["dev@tamerhayek.com"],
+		siteName: "Tamer Hayek | Portfolio",
+		images: "/avatar.png",
+		url: "https://tamerhayek.com",
 		type: "website",
-		publishedTime: "2023-07-03T00:00:00.000Z",
-		authors: ["Tamer"],
 	},
 	twitter: {
 		card: "summary_large_image",
-		image: "https://tamerhayek.com/images/avatar.png",
+		images: "/avatar.png",
 		title: "Tamer Hayek | Portfolio",
 		description:
 			"I'm a full-stack web developer with a passion for technology and I am dedicated to creating innovative and user-friendly digital experiences.",

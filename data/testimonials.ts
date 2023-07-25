@@ -1,4 +1,4 @@
-import avatar from "@/public/images/avatar.png";
+import avatar from "@/public/avatar.png";
 
 export default [
 	{

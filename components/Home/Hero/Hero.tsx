@@ -17,7 +17,7 @@ const Hero = () => {
 				<h2 className="text-2xl md:text-3xl lg:text-5xl py-2">
 					Full Stack Developer
 				</h2>
-				<p className="text-md md:text-xl lg:text-3xl py-2 leading-8 text-gray-400 max-w-xl lg:max-w-2xl">
+				<p className="text-md md:text-xl lg:text-2xl py-2 leading-8 text-gray-400 max-w-xl lg:max-w-2xl">
 					I&apos;m a full-stack web developer with a passion for
 					technology and I am dedicated to creating innovative and
 					user-friendly digital experiences.
