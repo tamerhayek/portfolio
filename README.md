@@ -24,8 +24,6 @@ The application runs on a [Docker](https://www.docker.com/) container using [Doc
 
 ### Containers:
 
-- [Caddy](https://caddyserver.com/)
-  Reverse proxy server. It encodes every request using `gzip`.
 - [SvelteKit server](https://kit.svelte.dev/)
   SSR framework for Svelte. The application is entirely server-side rendered. It's very fast and efficient. It's also very easy to use and the build size is very small. It uses the Node Adapter.
 
@@ -372,30 +370,4 @@ pnpm docker:logs:<app>
 
 ```bash
 pnpm docker:prune
-```
-
-##### Caddy
-
-Rebuild the Caddy image. Useful if you changed the Caddyfile and added different domains. It will regenerate every SSL certs.
-
-```bash
-pnpm docker:caddy:rebuild
-```
-
-Formats the Caddyfile.
-
-```bash
-pnpm docker:caddy:format
-```
-
-Reloads the Caddy server.
-
-```bash
-pnpm docker:caddy:reload
-```
-
-Create an encrypted password.
-
-```bash
-pnpm docker:caddy:hash-password
 ```
