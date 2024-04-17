@@ -79,7 +79,7 @@
 		{
 			title: 'Portfolio',
 			description: languageTag() === 'it' ? 'Il mio portfolio' : 'This is my portfolio',
-			image: '/assets/images/projects/game-hub.webp',
+			image: '/assets/images/projects/portfolio.webp',
 			alt: languageTag() === 'it' ? 'Sito Web Portfolio' : 'Portfolio Website',
 			href: '/',
 			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
