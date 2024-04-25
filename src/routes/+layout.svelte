@@ -87,24 +87,10 @@
 					? 'Tutti i diritti riservati'
 					: 'All rights reserved'}
 			</p>
-			<div class="flex gap-5">
-				<a
-					class="link-hover link text-secondary"
-					href="https://www.iubenda.com/privacy-policy/93742890"
-					target="_blank"
-					rel="noreferrer, noopener"
-				>
-					Privacy Policy
-				</a>
-				<a
-					class="link-hover link text-secondary"
-					href="https://www.iubenda.com/privacy-policy/93742890/cookie-policy"
-					target="_blank"
-					rel="noreferrer, noopener"
-				>
-					Cookie Policy
-				</a>
-			</div>
+			<p>
+				<span class="font-bold">P.IVA</span> 17090301007
+			</p>
+			<p><span class="font-bold">C.F.</span> HYKTMR00T15H501Q</p>
 			<div class="flex gap-10 pb-5">
 				<a href={'mailto:dev@tamerhayek.com'}>
 					<Icon src={Mail} size="30px" class="transition-all hover:scale-110" />
