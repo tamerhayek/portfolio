@@ -1,20 +1,21 @@
 <script lang="ts">
-	import { LocaleController } from '$lib/components/ui';
-	import { languageTag } from '$paraglide/runtime';
 	import { page } from '$app/stores';
+	import { LocaleController } from '$lib/components/ui';
 	import { i18n } from '$lib/i18n';
+	import { languageTag } from '$paraglide/runtime';
+	import '@fontsource/ubuntu';
+	import '@fontsource/ubuntu/300.css';
 	import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import {
-		BrandLinkedin,
 		BrandGithub,
 		BrandInstagram,
+		BrandLinkedin,
 		BrandTelegram,
 		Mail
 	} from '@steeze-ui/tabler-icons';
 	import '../app.css';
-	import '@fontsource/ubuntu';
-	import '@fontsource/ubuntu/300.css'; // Light
+// Light
 	import '@fontsource/ubuntu/700.css'; // Bold
 	import '@fontsource/ubuntu/400-italic.css'; // Regular Italic
 </script>
@@ -31,7 +32,7 @@
 
 	<meta name="author" content="Tamer Hayek" />
 
-	<link rel="canonical" href="{$page.url.origin}{$page.url.pathname}" />
+	<link rel="canonical" href="https://tamerhayek.com{$page.url.pathname}" />
 </svelte:head>
 
 <ParaglideJS {i18n}>
