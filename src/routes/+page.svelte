@@ -4,6 +4,7 @@
 	import { languageTag } from '$paraglide/runtime';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import {
+		ArrowUpRight,
 		BrandCss3,
 		BrandHtml5,
 		BrandJavascript,
@@ -14,11 +15,10 @@
 		BrandSvelte,
 		BrandTailwind,
 		BrandTypescript,
-		Mail,
-		Sql,
-		ArrowUpRight,
 		Calendar,
-		CalendarCheck
+		CalendarCheck,
+		Mail,
+		Sql
 	} from '@steeze-ui/tabler-icons';
 	import '../app.css';
 
@@ -122,17 +122,17 @@
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="{$page.url.origin}{$page.url.pathname}" />
+	<meta property="og:url" content="https://tamerhayek.com{$page.url.pathname}" />
 	<meta property="og:title" content={translate.title()} />
 	<meta property="og:description" content={translate.description()} />
-	<meta property="og:image" content="{$page.url.origin}/avatar.webp" />
+	<meta property="og:image" content="https://tamerhayek.com/avatar.webp" />
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="{$page.url.origin}{$page.url.pathname}" />
+	<meta property="twitter:url" content="https://tamerhayek.com{$page.url.pathname}" />
 	<meta property="twitter:title" content={translate.title()} />
 	<meta property="twitter:description" content={translate.description()} />
-	<meta property="twitter:image" content="{$page.url.origin}/avatar.webp" />
+	<meta property="twitter:image" content="https://tamerhayek.com/avatar.webp" />
 </svelte:head>
 
 <div class="flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-5">
