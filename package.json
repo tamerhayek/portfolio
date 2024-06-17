@@ -34,7 +34,10 @@
 		"docker:down:web": "docker compose down portfolio-web",
 		"docker:logs": "docker compose logs -f",
 		"docker:logs:web": "docker compose logs -f portfolio-web",
-		"docker:prune": "docker system prune --all --force"
+		"docker:prune": "docker system prune --all --force",
+		"act": "act --rm --secret-file=.github/workflows/.env.secrets",
+		"act:ls": "act -l",
+		"act:graph": "act --graph"
 	},
 	"devDependencies": {
 		"@inlang/paraglide-js": "^1.6.1",
