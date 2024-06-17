@@ -8,14 +8,14 @@
 	import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import {
+		BrandDiscord,
 		BrandGithub,
 		BrandInstagram,
 		BrandLinkedin,
 		BrandTelegram,
 		Mail
 	} from '@steeze-ui/tabler-icons';
-	import '../app.css';
-// Light
+	import '../app.css'; // Light
 	import '@fontsource/ubuntu/700.css'; // Bold
 	import '@fontsource/ubuntu/400-italic.css'; // Regular Italic
 </script>
@@ -96,8 +96,11 @@
 				<a href={'mailto:dev@tamerhayek.com'}>
 					<Icon src={Mail} size="30px" class="transition-all hover:scale-110" />
 				</a>
-				<a href={'https://t.me/tamibyte'}>
+				<a target="_blank" href={'https://tamerhayek.com/telegram'}>
 					<Icon src={BrandTelegram} size="30px" class="transition-all hover:scale-110" />
+				</a>
+				<a target="_blank" href={'https://tamerhayek.com/discord'}>
+					<Icon src={BrandDiscord} size="30px" class="transition-all hover:scale-110" />
 				</a>
 			</div>
 		</div>
