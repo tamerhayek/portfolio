@@ -9,3 +9,7 @@ tamerhayek.com {
 www.tamerhayek.com {
 	reverse_proxy * portfolio-web:3000
 }
+
+portainer.tamerhayek.com {
+	reverse_proxy * portainer:9000
+}
