@@ -21,7 +21,7 @@
 		"verify": "pnpm format && pnpm check && pnpm lint",
 		"verify:tests": "pnpm format && pnpm check && pnpm lint && pnpm test",
 		"inlang:compile": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide",
-		"docker:start": "pnpm docker:start:web && pnpm docker:start:caddy && pnpm docker:start:portainer && pnpm docker:prune",
+		"docker:start": "pnpm docker:start:caddy && pnpm docker:start:portainer && pnpm docker:start:web && pnpm docker:prune",
 		"docker:start:caddy": "cd caddy && docker compose up -d && pnpm docker:prune",
 		"docker:start:portainer": "cd portainer && docker compose up -d && pnpm docker:prune",
 		"docker:start:web": "docker compose up -d --build portfolio-web && pnpm docker:prune",
