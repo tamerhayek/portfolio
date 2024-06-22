@@ -1,0 +1,11 @@
+{
+	email certs@tamerhayek.com
+}
+
+tamerhayek.com {
+	reverse_proxy * portfolio-web:3000
+}
+
+www.tamerhayek.com {
+	reverse_proxy * portfolio-web:3000
+}
