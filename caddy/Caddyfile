@@ -3,10 +3,12 @@
 }
 
 tamerhayek.com {
+	encode gzip
 	reverse_proxy * portfolio-web:3000
 }
 
 www.tamerhayek.com {
+	encode gzip
 	reverse_proxy * portfolio-web:3000
 }
 
