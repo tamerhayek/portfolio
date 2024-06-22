@@ -42,7 +42,7 @@
 		"docker:rebuild:caddy": "cd caddy && docker compose down && docker compose up -d && pnpm docker:prune",
 		"docker:reload:caddy": "cd caddy && docker compose exec -w /etc/caddy caddy caddy reload",
 		"docker:format:caddy": "cd caddy && docker compose exec -w /etc/caddy caddy caddy fmt --overwrite",
-		"docker:prune": "docker system prune --all --force",
+		"docker:prune": "docker system prune --all --volumes --force",
 		"act": "act --rm --secret-file=.github/workflows/.env.secrets",
 		"act:ls": "act -l",
 		"act:graph": "act --graph"
