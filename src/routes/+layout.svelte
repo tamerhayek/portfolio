@@ -5,7 +5,7 @@
 	import { languageTag } from '$paraglide/runtime';
 	import '@fontsource/ubuntu';
 	import '@fontsource/ubuntu/300.css';
-	import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit';
+	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import {
 		BrandDiscord,

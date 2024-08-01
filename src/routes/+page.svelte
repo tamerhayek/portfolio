@@ -286,7 +286,7 @@
 		</div>
 	</section>
 
-	<div class="divider my-20" />
+	<div class="divider my-20"></div>
 
 	<section
 		id="stack"
@@ -378,7 +378,7 @@
 		</div>
 	</section>
 
-	<div class="divider my-20" />
+	<div class="divider my-20"></div>
 
 	<section id="timeline" class="flex w-full flex-col items-center justify-center gap-5 text-center">
 		{#each timeline as event, index}
@@ -411,7 +411,7 @@
 		{/each}
 	</section>
 
-	<div class="divider my-20" />
+	<div class="divider my-20"></div>
 
 	<section id="portfolio" class="my-5 flex min-h-screen flex-col items-center justify-center">
 		<h3 class="text-center text-4xl font-bold tracking-tight sm:text-5xl">Showroom</h3>
