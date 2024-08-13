@@ -78,5 +78,5 @@ jobs:
             cd portfolio
             echo "Pulling changes"
             git pull
-            echo "Rebuilding web"
-            pnpm docker:start:web
+            echo "Rebuilding..."
+            pnpm docker:start
