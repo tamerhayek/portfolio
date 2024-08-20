@@ -21,7 +21,7 @@
 		"verify": "pnpm format && pnpm check && pnpm lint",
 		"verify:tests": "pnpm format && pnpm check && pnpm lint && pnpm test",
 		"inlang:compile": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide",
-		"docker:start": "docker compose up -d && pnpm docker:prune",
+		"docker:start": "docker compose up -d --build && pnpm docker:prune",
 		"docker:build": "docker compose build && pnpm docker:prune",
 		"docker:restart": "docker compose restart && pnpm docker:prune",
 		"docker:stop": "docker compose stop",
