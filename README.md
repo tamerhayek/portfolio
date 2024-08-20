@@ -54,126 +54,15 @@ The available languages are _english_ and _italian_ and the default one is _ital
 
 As a collaboration tool we use [Git](https://git-scm.com) and [GitHub](https://github.com)
 
-### Useful commands
+### Setup
 
-##### Clone the repository
+#### Clone the repository
 
 ```bash
 git clone https://github.com/tamerhayek/portfolio
 ```
 
-##### Pull the latest changes
-
-```bash
-git pull
-```
-
-##### Pull the latest changes with rebase
-
-```bash
-git pull --rebase
-```
-
-##### Add the changes to the staging area
-
-```bash
-git add .
-```
-
-```bash
-git add <file-name>
-```
-
-##### Commit the changes
-
-```bash
-git commit -m "<commit-message>"
-```
-
-##### Push the changes
-
-```bash
-git push
-```
-
-##### Push the changes with tags
-
-```bash
-git push --follow-tags
-```
-
-##### Create a new tag
-
-```bash
-git tag v1.0.0
-```
-
-##### Create and commit a new tag
-
-It will modify the `package.json` file and update the version.
-
-```bash
-pnpm version <version>
-```
-
-`<version>`:
-
-- `major` -> `x+1.0.0`
-- `minor` -> `x.x+1.0`
-- `patch` -> `x.x.x+1`
-
-##### Create a new branch
-
-```bash
-git switch -C <branch-name>
-```
-
-##### Create a new branch and set the upstream
-
-```bash
-git switch -C <branch-name> origin/<origin-branch-name>
-```
-
-##### Push the branch
-
-```bash
-git push --set-upstream origin <branch-name>
-```
-
-##### Merge the branch
-
-It will merge the branch with the current branch.
-
-```bash
-git merge <branch-name> --no-ff
-```
-
-Use the `--no-ff` option to not create a fast-forward merge. It will create a normal merge.
-Preferred for a better commits history.
-
-If you want to mantain the merged branch then switch to it and run the following command:
-
-```bash
-git merge <current-branch>
-```
-
-The two branches will be up to date.
-
-##### Stash the changes
-
-```bash
-git stash
-```
-
-##### Recover stashed changes
-
-```bash
-git stash pop
-```
-
----
-
-## Scripts
+#### Scripts
 
 Make sure to install every dependency in the `package.json` before running any command.
 
@@ -183,21 +72,19 @@ pnpm install
 
 ### Development commands
 
-##### Inlang
+#### Inlang
 
 ```bash
 pnpm inlang:compile
 ```
 
-##### Sveltekit commands
-
-###### Build
+#### Build
 
 ```bash
 pnpm build
 ```
 
-###### Check
+#### Check
 
 ```bash
 pnpm check
@@ -209,19 +96,19 @@ With the watch option:
 pnpm check:watch
 ```
 
-###### Lint
+#### Lint
 
 ```bash
 pnpm lint
 ```
 
-###### Format
+#### Format
 
 ```bash
 pnpm format
 ```
 
-###### Tests
+#### Tests
 
 ```bash
 pnpm test
@@ -245,7 +132,7 @@ Vitest tests:
 pnpm test:unit
 ```
 
-###### Verify
+#### Verify
 
 ```bash
 pnpm verify
@@ -259,7 +146,7 @@ pnpm verify:tests
 
 ### How to run the application
 
-##### Development mode
+#### Development mode
 
 ```bash
 pnpm dev
@@ -288,34 +175,10 @@ This command will start the Docker container building every images concurrently.
 pnpm docker:start
 ```
 
-This command will start the Docker containers building the images sequentially (one after the other).
-
-```bash
-pnpm docker:start:apps
-```
-
-Start only the `<app>` Docker image:
-
-```bash
-pnpm docker:start:<app>
-```
-
 ##### Build
 
 ```bash
 pnpm docker:build
-```
-
-Build only the `<app>` Docker image:
-
-```bash
-pnpm docker:build:<app>
-```
-
-##### Build without cache
-
-```bash
-pnpm docker:build:no-cache
 ```
 
 ##### Restart
@@ -324,22 +187,10 @@ pnpm docker:build:no-cache
 pnpm docker:restart
 ```
 
-Restart only the `<app>` Docker image:
-
-```bash
-pnpm docker:restart:<app>
-```
-
 ##### Stop
 
 ```bash
 pnpm docker:stop
-```
-
-Stop only the `<app>` Docker image:
-
-```bash
-pnpm docker:stop:<app>
 ```
 
 ##### Down
@@ -348,22 +199,10 @@ pnpm docker:stop:<app>
 pnpm docker:down
 ```
 
-Stop and remove the `<app>` Docker image:
-
-```bash
-pnpm docker:down:<app>
-```
-
 ##### Logs
 
 ```bash
 pnpm docker:logs
-```
-
-Logs only the `<app>` Docker image:
-
-```bash
-pnpm docker:logs:<app>
 ```
 
 ##### Prune
