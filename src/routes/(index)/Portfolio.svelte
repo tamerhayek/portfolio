@@ -26,17 +26,6 @@
 			alt: languageTag() === 'it' ? 'Sito Web Clarisse Grosseto' : 'Clarisse Grosseto Website',
 			href: 'https://clarissegrosseto.it',
 			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
-		},
-		{
-			title: languageTag() === 'it' ? 'Progetto Game Hub' : 'Game Hub Project',
-			description:
-				languageTag() === 'it'
-					? 'Progetto personale che prende i giochi dalle API RAWG'
-					: 'Personal project that fetchs games using RAWG API',
-			image: '/assets/images/projects/game-hub.webp',
-			alt: languageTag() === 'it' ? 'Progetto personale Game Hub' : 'Game Hub personal project',
-			href: 'https://game-hub-tamerhayek.netlify.app/',
-			skills: ['HTML5', 'CSS3', 'Typescript', 'React', 'ChakraUI']
 		}
 	];
 </script>
