@@ -16,7 +16,7 @@
 			image: '/assets/images/projects/olymposhub.webp',
 			alt: languageTag() === 'it' ? 'Sito Web Olympos Hub' : 'Olympos Hub Website',
 			href: 'https://olymposhub.io',
-			skills: ['HTML5', 'CSS3', 'JavaScript', 'Wappler']
+			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
 		},
 		{
 			title: 'Clarisse Grosseto',
