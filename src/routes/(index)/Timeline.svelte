@@ -28,11 +28,8 @@
 			title: 'Fullstack Developer Freelance',
 			description:
 				languageTag() === 'it'
-					? `Sono responsabile dello sviluppo di applicazioni web dall'inizio alla fine, compreso lo sviluppo frontend e backend.
-					Il mio lavoro di sviluppatore full stack prevede l'utilizzo di un'ampia gamma di linguaggi e frameworks. Ho anche familiarità con vari strumenti di sviluppo come Git e strumenti low-code come Wappler e Squarespace.`
-					: `I am responsible for developing web applications from start to finish, including both the front-end and back-end development.
-					My work as a full stack developer involves using a wide range of programming languages and frameworks.
-					I am also familiar with various development tools such as Git and low-code tools such as Wappler and Squarespace.`,
+					? 'Sono un Full Stack Developer freelance, esperto nella creazione di soluzioni digitali complete, dallo sviluppo frontend intuitivo a backend robusti e scalabili. Collaboro con clienti per trasformare le loro idee in realtà, utilizzando tecnologie moderne.'
+					: 'I am a freelance Full Stack Developer, skilled in creating end-to-end digital solutions, from intuitive frontend development to robust, scalable backend systems. I collaborate with clients to turn their ideas into reality using modern technologies.',
 			type: languageTag() === 'it' ? 'Lavoro' : 'Work',
 			date: languageTag() === 'it' ? 'Gennaio 2023 - in corso' : 'January 2023 - in progress',
 			completed: false
