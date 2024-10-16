@@ -13,16 +13,11 @@
 			completed: false
 		},
 		{
-			title:
-				languageTag() === 'it' ? 'Partnership con Olympos Hub' : 'Partnership with Olympos Hub',
+			title: 'Software Engineer - Olympos Hub',
 			description:
 				languageTag() === 'it'
-					? `Olympos Hub è leader nello sviluppo di applicazioni web per piccole e medie imprese e aziende, che lanciano prodotti software in modo rapido ed economico, accelerando il processo di validazione delle idee sul mercato.
-					Sono stato responsabile della progettazione e dell'implementazione del frontend e del backend dell'applicazione, utilizzando una serie di linguaggi di programmazione e framework combinati con una serie di strumenti low-code/no-code per accelerare il processo di sviluppo.`
-					: `Olympos Hub is a leader in web application development for small and medium enterprises,
-					launching software products quickly and cost-effectively, accelerating the process of validating ideas in the market.
-					I was responsible for designing and implementing the application's front-end and back-end,
-					using a range of programming languages and frameworks combined with a set of low-code/no-code tools to speed up the development process.`,
+					? "Forniamo soluzioni integrate per i servizi basati sul web, curando ogni aspetto funzionale alla realizzazione dei progetti dei nostri clienti: dalla progettazione allo sviluppo web, dall'implementazione alla gestione di reti e dispositivi hardware."
+					: "We provide integrated solutions for web-based services, taking care of every functional aspect in the realization of our customers' projects: from design to web development, from implementation to the management of networks and hardware devices.",
 			type: languageTag() === 'it' ? 'Lavoro' : 'Work',
 			date: languageTag() === 'it' ? 'Settembre 2022 - in corso' : 'September 2022 - in progress',
 			completed: false,
@@ -60,7 +55,9 @@
 <section id="timeline" class="flex w-full flex-col items-center justify-center gap-5 text-center">
 	{#each timeline as event, index}
 		<div class="flex w-full flex-col gap-5 rounded-xl border-2 border-primary p-5 text-left">
-			<h2>{event.title} <span class="badge badge-secondary badge-lg ml-2">{event.type}</span></h2>
+			<h3 class="flex items-center gap-2">
+				{event.title} <span class="badge badge-secondary badge-lg ml-2">{event.type}</span>
+			</h3>
 			<p
 				class="flex items-center gap-2"
 				class:text-gray-400={event.completed}

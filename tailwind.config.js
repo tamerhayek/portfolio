@@ -5,9 +5,6 @@ import daisyui from 'daisyui';
 export default {
 	darkMode: 'class',
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	theme: {
-		extend: {}
-	},
 	plugins: [typography, daisyui],
 	daisyui: {
 		themes: [
@@ -19,6 +16,8 @@ export default {
 					secondary: '#5EEAD4',
 					'secondary-focus': '#00cfbd',
 					'secondary-content': '#212121',
+					neutral: '#2E2A2E',
+					'neutral-content': '#BFBECC',
 					accent: '#1F3A8A',
 					'accent-focus': '#1F5A8A',
 					'accent-content': '#ebecf0',

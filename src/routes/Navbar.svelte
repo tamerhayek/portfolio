@@ -5,7 +5,7 @@
 </script>
 
 <nav id="navbar" class="fixed top-0 z-50 flex w-full items-center justify-center bg-base-100">
-	<div class="flex w-full max-w-7xl items-center justify-between px-5 py-5">
+	<div class="flex w-full max-w-6xl items-center justify-between px-5 py-5">
 		<div
 			class="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-gradient-to-b from-teal-200 to-teal-700 object-contain"
 		>

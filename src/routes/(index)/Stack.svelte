@@ -21,7 +21,7 @@
 	class="flex flex-col items-center justify-center gap-5 text-center lg:flex-row lg:text-right"
 >
 	<div class="order-1 flex max-w-xl shrink-0 flex-col items-center lg:order-2">
-		<h3 class="text-md py-2 leading-8 md:text-xl lg:max-w-2xl lg:text-2xl">
+		<h3 class="py-2 text-base leading-8 text-neutral-content md:text-xl lg:max-w-2xl lg:text-xl">
 			{#if languageTag() === 'it'}
 				Capace di costruire siti web da zero sfruttando diversi linguaggi, frameworks e librerie.
 			{:else}

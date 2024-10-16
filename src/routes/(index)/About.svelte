@@ -20,28 +20,16 @@
 				</p>
 				<p class="text-gray-200">
 					{#if languageTag() === 'it'}
-						Sono uno sviluppatore web fullstack con la passione per la tecnologia e mi dedico alla
-						creazione di esperienze digitali innovative e user-friendly. Con una solida base di
-						sviluppo sia frontend che backend, sono specializzato nell'utilizzo di tecnologie
-						all'avanguardia per costruire applicazioni reattive, scalabili e dinamiche.
+						Software Engineer specializzato nello sviluppo full-stack, con un approccio orientato
+						all’innovazione e alla creazione di soluzioni efficienti e scalabili. Mi impegno a
+						combinare design intuitivo e architetture robuste, utilizzando tecnologie moderne e
+						metodologie agili. Sempre pronto a raccogliere nuove sfide per crescere e contribuire a
+						progetti innovativi.
 					{:else}
-						I'm a full-stack web developer with a passion for technology and I am dedicated to
-						creating innovative and user-friendly digital experiences. With a solid foundation in
-						both frontend and backend development, I specialize in utilizing cutting-edge
-						technologies to build responsive, scalable, and dynamic applications.
-					{/if}
-				</p>
-				<p class="text-gray-200">
-					{#if languageTag() === 'it'}
-						Mi trovo bene in ambienti collaborativi e mi impegno a fornire risultati eccezionali ai
-						clienti. Cerco costantemente di ampliare le mie competenze e conoscenze e sono
-						entusiasta di contribuire con il mio talento a qualsiasi team o progetto che apprezzi
-						l'innovazione, la creatività e l'eccellenza.
-					{:else}
-						I thrive in collaborative environments and I am committed to delivering exceptional
-						results for clients. I am constantly seeking to expand my skills and knowledge, and I am
-						excited to contribute my talents to any team or project that values innovation,
-						creativity, and excellence.
+						Software Engineer with a focus on full-stack development, driven by innovation and the
+						creation of efficient, scalable solutions. I’m dedicated to combining intuitive design
+						with robust architectures, leveraging modern technologies and agile methodologies.
+						Always eager to take on new challenges, grow, and contribute to innovative projects.
 					{/if}
 				</p>
 			</div>
@@ -49,9 +37,9 @@
 				<img
 					src="/assets/images/portrait.webp"
 					width={280}
-					height={280}
+					height={400}
 					alt="Tamer Hayek Portrait"
-					class="aspect-square rounded-full object-contain"
+					class="rounded-lg object-contain"
 				/>
 			</div>
 		</div>

@@ -12,8 +12,8 @@
 		<h1 class="text-4xl font-bold text-primary lg:text-6xl 2xl:text-7xl">
 			{languageTag() === 'it' ? 'Tamer Hayek' : "I'm Tamer Hayek"}
 		</h1>
-		<h2 class="text-2xl md:text-3xl lg:text-5xl">Full Stack Developer</h2>
-		<div class="py-5 lg:py-10">
+		<h2 class="text-2xl md:text-3xl lg:text-4xl">Full Stack Developer</h2>
+		<div class="py-5">
 			<a class="btn btn-primary" href={'mailto:dev@tamerhayek.com'}>
 				{languageTag() === 'it' ? 'Contattami' : 'Contact me'}
 				<Icon size="24px" src={Mail} class="transition-all hover:scale-110" />
