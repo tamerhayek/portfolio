@@ -14,8 +14,7 @@ const config = {
 			regions: ['fra1']
 		}),
 		alias: {
-			$components: 'src/lib/components',
-			$paraglide: 'src/lib/paraglide'
+			'$lib/*': './src/lib/*'
 		}
 	}
 };

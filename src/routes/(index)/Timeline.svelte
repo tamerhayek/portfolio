@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { languageTag } from '$paraglide/runtime';
+	import { languageTag } from '$lib/paraglide/runtime';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import { ArrowUpRight, Calendar, CalendarCheck } from '@steeze-ui/tabler-icons';
 
@@ -52,8 +52,8 @@
 <section id="timeline" class="flex w-full flex-col items-center justify-center gap-5 text-center">
 	{#each timeline as event, index}
 		<div class="flex w-full flex-col gap-5 rounded-xl border-2 border-primary p-5 text-left">
-			<h3 class="flex items-center gap-2">
-				{event.title} <span class="badge badge-secondary badge-lg ml-2">{event.type}</span>
+			<h3 class="flex flex-wrap items-center gap-2 text-white">
+				{event.title} <span class="badge badge-secondary badge-lg">{event.type}</span>
 			</h3>
 			<p
 				class="flex items-center gap-2"
@@ -77,7 +77,7 @@
 			{/if}
 		</div>
 		{#if index < timeline.length - 1}
-			<div class="my-2 h-[1px] w-1/2 bg-gradient-to-r from-secondary to-primary"></div>
+			<div class="my-2 h-[1px] w-1/2 bg-secondary"></div>
 		{/if}
 	{/each}
 </section>

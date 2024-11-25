@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { languageTag } from '$paraglide/runtime';
+	import { languageTag } from '$lib/paraglide/runtime';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import { Mail } from '@steeze-ui/tabler-icons';
 </script>
@@ -9,8 +9,8 @@
 	class="flex w-full flex-col items-center justify-center gap-20 text-center lg:flex-row lg:text-left"
 >
 	<div class="order-2 flex shrink-0 flex-col gap-5 lg:order-1">
-		<h1 class="text-4xl font-bold text-primary lg:text-6xl 2xl:text-7xl">Tamer Hayek</h1>
-		<h2 class="text-2xl md:text-3xl lg:text-4xl">Full Stack Developer</h2>
+		<h1 class="text-5xl font-bold sm:text-6xl 2xl:text-7xl">Tamer Hayek</h1>
+		<h2 class="text-2xl text-white md:text-3xl lg:text-4xl">Full Stack Developer</h2>
 		<div class="py-5">
 			<a class="btn btn-primary" href={'mailto:dev@tamerhayek.com'}>
 				{#if languageTag() === 'it'}

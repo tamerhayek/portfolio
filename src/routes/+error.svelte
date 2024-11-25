@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { translate } from '$lib/i18n';
-	import { languageTag } from '$paraglide/runtime';
+	import { languageTag } from '$lib/paraglide/runtime';
 </script>
 
 <svelte:head>

@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { languageTag } from '$paraglide/runtime';
+	import { ImagePortrait } from '$lib/assets/images';
+	import { languageTag } from '$lib/paraglide/runtime';
 </script>
 
 <section
@@ -19,7 +20,7 @@
 		</div>
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
 			<div class="order-2 flex flex-col items-center justify-center gap-5 lg:order-1">
-				<p class="mb-5 block text-xl font-bold text-primary lg:hidden">
+				<p class="mb-5 block text-xl font-bold text-primary-content lg:hidden">
 					{#if languageTag() === 'it'}
 						Chi sono?
 					{:else}
@@ -41,13 +42,11 @@
 					{/if}
 				</p>
 			</div>
-			<div class="order-1 flex justify-center lg:order-2">
-				<img
-					src="/assets/images/portrait.webp"
-					width={280}
-					height={400}
-					alt="Tamer Hayek Portrait"
-					class="rounded-lg object-contain"
+			<div class="order-1 flex justify-center sm:max-h-[700px] lg:order-2 lg:max-h-96">
+				<enhanced:img
+					src={ImagePortrait}
+					alt={languageTag() === 'it' ? 'Ritratto Tamer Hayek' : 'Tamer Hayek portrait'}
+					class="w-fit rounded-lg object-contain sm:max-h-[700px] lg:max-h-96"
 				/>
 			</div>
 		</div>

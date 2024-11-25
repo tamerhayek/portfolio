@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { i18n } from '$lib/i18n';
-	import { languageTag } from '$paraglide/runtime';
+	import { languageTag } from '$lib/paraglide/runtime';
 	import '@fontsource/ubuntu';
 	import '@fontsource/ubuntu/300.css';
 	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
