@@ -16,7 +16,7 @@
 	<label for="locale" class="sr-only">
 		{languageTag() === 'it' ? 'Cambia la lingua' : 'Change the language'}
 	</label>
-	<select id="locale" on:change={handleOnChangeLanguage} class="select select-bordered">
+	<select id="locale" onchange={handleOnChangeLanguage} class="select select-bordered">
 		<option selected={languageTag() === 'it'} value="it">Italiano</option>
 		<option selected={languageTag() === 'en'} value="en">English</option>
 	</select>

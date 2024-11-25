@@ -10,6 +10,12 @@
 	import '@fontsource/ubuntu/400-italic.css'; // Regular Italic
 	import Footer from './Footer.svelte';
 	import Navbar from './Navbar.svelte';
+
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <svelte:head>
@@ -31,7 +37,7 @@
 
 	<main class="flex w-full items-center justify-center">
 		<div class="flex min-h-screen w-full max-w-6xl items-center justify-center pt-28">
-			<slot />
+			{@render children?.()}
 		</div>
 	</main>
 
