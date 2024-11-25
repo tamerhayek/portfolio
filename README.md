@@ -20,12 +20,8 @@ You can find the following pages:
 
 ## Tech stack
 
-The application runs on a [Docker](https://www.docker.com/) container using [Docker Compose](https://www.docker.com/compose).
-
-### Containers:
-
-- [SvelteKit server](https://kit.svelte.dev/)
-  SSR framework for Svelte. The application is entirely server-side rendered. It's very fast and efficient. It's also very easy to use and the build size is very small. It uses the Node Adapter.
+The application runs using [SvelteKit](https://kit.svelte.dev/)
+SSR framework for Svelte. The application is entirely server-side rendered. It's very fast and efficient. It's also very easy to use and the build size is very small. It uses the Node Adapter.
 
 ### Libraries:
 
@@ -84,66 +80,6 @@ pnpm inlang:compile
 pnpm build
 ```
 
-#### Check
-
-```bash
-pnpm check
-```
-
-With the watch option:
-
-```bash
-pnpm check:watch
-```
-
-#### Lint
-
-```bash
-pnpm lint
-```
-
-#### Format
-
-```bash
-pnpm format
-```
-
-#### Tests
-
-```bash
-pnpm test
-```
-
-Playwright tests:
-
-```bash
-pnpm test:integration
-```
-
-To setup playwright:
-
-```bash
-pnpm test:setup
-```
-
-Vitest tests:
-
-```bash
-pnpm test:unit
-```
-
-#### Verify
-
-```bash
-pnpm verify
-```
-
-Verify the code and run the tests.
-
-```bash
-pnpm verify:tests
-```
-
 ### How to run the application
 
 #### Development mode
@@ -163,50 +99,4 @@ pnpm dev:host
 ```bash
 pnpm build
 pnpm preview
-```
-
-#### Docker
-
-##### Start
-
-This command will start the Docker container building every images concurrently.
-
-```bash
-pnpm docker:start
-```
-
-##### Build
-
-```bash
-pnpm docker:build
-```
-
-##### Restart
-
-```bash
-pnpm docker:restart
-```
-
-##### Stop
-
-```bash
-pnpm docker:stop
-```
-
-##### Down
-
-```bash
-pnpm docker:down
-```
-
-##### Logs
-
-```bash
-pnpm docker:logs
-```
-
-##### Prune
-
-```bash
-pnpm docker:prune
 ```

@@ -20,24 +20,13 @@
 		"test:unit": "vitest run",
 		"verify": "pnpm format && pnpm check && pnpm lint",
 		"verify:tests": "pnpm format && pnpm check && pnpm lint && pnpm test",
-		"inlang:compile": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide",
-		"docker:start": "docker compose up -d --build && pnpm docker:prune",
-		"docker:build": "docker compose build && pnpm docker:prune",
-		"docker:restart": "docker compose restart && pnpm docker:prune",
-		"docker:stop": "docker compose stop",
-		"docker:down": "docker compose down",
-		"docker:logs": "docker compose logs -f",
-		"docker:prune": "docker system prune --all --volumes --force",
-		"act": "act --rm --secret-file=.github/workflows/.env.secrets",
-		"act:ls": "act -l",
-		"act:graph": "act --graph"
+		"inlang:compile": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide"
 	},
 	"devDependencies": {
 		"@inlang/paraglide-js": "^1.11.3",
 		"@playwright/test": "^1.48.1",
 		"@steeze-ui/svelte-icon": "^1.5.0",
 		"@steeze-ui/tabler-icons": "^3.2.0",
-		"@sveltejs/adapter-node": "^5.2.7",
 		"@sveltejs/kit": "^2.7.1",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
 		"@tailwindcss/typography": "^0.5.15",
@@ -66,6 +55,9 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/ubuntu": "^5.1.0",
-		"@inlang/paraglide-sveltekit": "0.11.0"
+		"@inlang/paraglide-sveltekit": "0.11.0",
+		"@sveltejs/adapter-vercel": "^5.4.8",
+		"@vercel/analytics": "^1.4.1",
+		"@vercel/speed-insights": "^1.1.0"
 	}
 }
