@@ -2,17 +2,14 @@
 	import { languageTag } from '$paraglide/runtime';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import {
-		BrandHtml5,
 		BrandCss3,
+		BrandHtml5,
 		BrandJavascript,
-		BrandTypescript,
-		BrandSvelte,
-		BrandReact,
-		BrandNextjs,
-		BrandTailwind,
 		BrandNodejs,
-		Sql,
-		BrandMongodb
+		BrandSvelte,
+		BrandTailwind,
+		BrandTypescript,
+		Sql
 	} from '@steeze-ui/tabler-icons';
 </script>
 
@@ -29,70 +26,15 @@
 				frameworks, and libraries.
 			{/if}
 		</h3>
-		<div class="flex w-full flex-wrap justify-center gap-10 py-10 lg:justify-end">
-			<Icon
-				size="50px"
-				src={BrandHtml5}
-				class="cursor-pointer transition-colors hover:text-orange-500"
-			/>
-			<Icon
-				size="50px"
-				src={BrandCss3}
-				class="cursor-pointer transition-colors hover:text-blue-600"
-			/>
-			<Icon
-				size="50px"
-				src={BrandJavascript}
-				class="cursor-pointer transition-colors hover:text-yellow-500"
-			/>
-			<Icon
-				size="50px"
-				src={BrandTypescript}
-				class="cursor-pointer transition-colors hover:text-blue-700"
-			/>
-			<a class="cursor-pointer" href="https://svelte.dev/">
-				<Icon
-					size="50px"
-					src={BrandSvelte}
-					class="cursor-pointer transition-colors hover:text-orange-500"
-				/>
-			</a>
-			<a class="cursor-pointer" href="https://www.react.dev">
-				<Icon
-					size="50px"
-					src={BrandReact}
-					class="cursor-pointer transition-colors hover:text-blue-600"
-				/>
-			</a>
-			<a class="cursor-pointer" href="https://nextjs.org/">
-				<Icon
-					size="50px"
-					src={BrandNextjs}
-					class="cursor-pointer transition-colors hover:text-gray-600"
-				/>
-			</a>
-			<a class="cursor-pointer" href="https://tailwindcss.com/">
-				<Icon
-					size="50px"
-					src={BrandTailwind}
-					class="cursor-pointer transition-colors hover:text-blue-500"
-				/>
-			</a>
-			<a class="cursor-pointer" href="https://nodejs.org">
-				<Icon
-					size="50px"
-					src={BrandNodejs}
-					class="cursor-pointer transition-colors hover:text-green-500"
-				/>
-			</a>
-			<Icon size="50px" src={Sql} class="cursor-pointer transition-colors hover:text-blue-600" />
-			<a class="cursor-pointer" href="https://mongodb.com/">
-				<Icon
-					size="50px"
-					src={BrandMongodb}
-					class="cursor-pointer transition-colors hover:text-green-600"
-				/>
-			</a>
+		<div class="grid w-full grid-cols-4 place-items-center gap-10 py-10 lg:place-items-end">
+			<Icon size="60px" src={BrandHtml5} class="transition-colors hover:text-orange-500" />
+			<Icon size="60px" src={BrandCss3} class="transition-colors hover:text-blue-600" />
+			<Icon size="60px" src={BrandJavascript} class="transition-colors hover:text-yellow-500" />
+			<Icon size="60px" src={BrandTypescript} class="transition-colors hover:text-blue-700" />
+			<Icon size="60px" src={BrandSvelte} class="transition-colors hover:text-orange-500" />
+			<Icon size="60px" src={BrandTailwind} class="transition-colors hover:text-blue-500" />
+			<Icon size="60px" src={BrandNodejs} class="transition-colors hover:text-green-500" />
+			<Icon size="60px" src={Sql} class="transition-colors hover:text-blue-600" />
 		</div>
 	</div>
 	<div

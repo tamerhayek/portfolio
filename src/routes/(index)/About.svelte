@@ -19,7 +19,7 @@
 		</div>
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
 			<div class="order-2 flex flex-col items-center justify-center gap-5 lg:order-1">
-				<p class="mb-5 block text-xl font-bold text-primary lg:hidden">
+				<p class="mb-5 block text-xl font-bold text-primary-content lg:hidden">
 					{#if languageTag() === 'it'}
 						Chi sono?
 					{:else}

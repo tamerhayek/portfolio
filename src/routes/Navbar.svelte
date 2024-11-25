@@ -21,6 +21,7 @@
 				href="https://github.com/tamerhayek"
 			>
 				<Icon src={BrandGithub} size="40px" class="transition-colors  hover:text-purple-700" />
+				<span class="sr-only">Github</span>
 			</a>
 			<a
 				class="cursor-pointer"
@@ -29,6 +30,7 @@
 				href="https://www.linkedin.com/in/tamerhayek/"
 			>
 				<Icon src={BrandLinkedin} size="40px" class="transition-colors  hover:text-blue-500" />
+				<span class="sr-only">Linkedin</span>
 			</a>
 			<a
 				class="cursor-pointer"
@@ -36,7 +38,8 @@
 				rel="noreferrer, noopener"
 				href="https://www.instagram.com/tamerhayek/"
 			>
-				<Icon src={BrandInstagram} size="40px" class="transition-colors  hover:text-secondary" />
+				<Icon src={BrandInstagram} size="40px" class="transition-colors  hover:text-pink-500" />
+				<span class="sr-only">Instagram</span>
 			</a>
 			<LocaleController />
 		</div>

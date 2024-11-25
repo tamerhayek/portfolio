@@ -30,20 +30,14 @@
 	<meta property="twitter:image" content="https://tamerhayek.com/avatar.webp" />
 </svelte:head>
 
-<div class="flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-5">
+<div class="flex min-h-screen w-full max-w-7xl flex-col items-center justify-center gap-20 px-5">
 	<Hero />
 
 	<About />
 
-	<div class="divider my-20"></div>
-
 	<Stack />
 
-	<div class="divider my-20"></div>
-
 	<Timeline />
-
-	<div class="divider my-20"></div>
 
 	<Portfolio />
 </div>
