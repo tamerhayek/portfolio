@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { languageTag } from '$paraglide/runtime';
+	import { ImageTechStack } from '$lib/assets/images';
+	import { languageTag } from '$lib/paraglide/runtime';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import {
 		BrandCss3,
@@ -40,9 +41,9 @@
 	<div
 		class="order-2 h-fit overflow-hidden rounded-xl object-contain pe-3 lg:order-1 lg:grow lg:pe-10"
 	>
-		<img
+		<enhanced:img
 			class="h-full w-full rounded-xl object-cover object-center"
-			src="/assets/images/tech_stack.webp"
+			src={ImageTechStack}
 			alt="Tech Stack"
 		/>
 	</div>

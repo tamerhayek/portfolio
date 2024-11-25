@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { languageTag } from '$paraglide/runtime';
+	import { ImagePortrait } from '$lib/assets/images';
+	import { languageTag } from '$lib/paraglide/runtime';
 </script>
 
 <section
@@ -41,13 +42,11 @@
 					{/if}
 				</p>
 			</div>
-			<div class="order-1 flex justify-center lg:order-2">
-				<img
-					src="/assets/images/portrait.webp"
-					width={280}
-					height={400}
-					alt="Tamer Hayek Portrait"
-					class="rounded-lg object-contain"
+			<div class="order-1 flex justify-center sm:max-h-[700px] lg:order-2 lg:max-h-96">
+				<enhanced:img
+					src={ImagePortrait}
+					alt={languageTag() === 'it' ? 'Ritratto Tamer Hayek' : 'Tamer Hayek portrait'}
+					class="w-fit rounded-lg object-contain sm:max-h-[700px] lg:max-h-96"
 				/>
 			</div>
 		</div>

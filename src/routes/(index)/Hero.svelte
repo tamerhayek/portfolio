@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { languageTag } from '$paraglide/runtime';
+	import { languageTag } from '$lib/paraglide/runtime';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import { Mail } from '@steeze-ui/tabler-icons';
 </script>

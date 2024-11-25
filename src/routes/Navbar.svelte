@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { LocaleController } from '$components/ui';
+	import { LocaleController } from '$lib/components/ui';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import { BrandGithub, BrandInstagram, BrandLinkedin } from '@steeze-ui/tabler-icons';
 </script>

@@ -1,17 +1,21 @@
 <script lang="ts">
-	import { languageTag } from '$paraglide/runtime';
+	import {
+		ImageProjectsClarisseGrosseto,
+		ImageProjectsOlymposHub
+	} from '$lib/assets/images/projects';
+	import { languageTag } from '$lib/paraglide/runtime';
 
 	const portfolio = [
 		{
 			title: 'Olympos Hub',
-			image: '/assets/images/projects/olymposhub.webp',
+			image: ImageProjectsOlymposHub,
 			alt: languageTag() === 'it' ? 'Sito Web Olympos Hub' : 'Olympos Hub Website',
 			href: 'https://olymposhub.io',
 			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
 		},
 		{
 			title: 'Polo Culturale Le Clarisse',
-			image: '/assets/images/projects/clarisse-grosseto.webp',
+			image: ImageProjectsClarisseGrosseto,
 			alt: languageTag() === 'it' ? 'Sito Web Clarisse Grosseto' : 'Clarisse Grosseto Website',
 			href: 'https://clarissegrosseto.it',
 			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
@@ -27,7 +31,7 @@
 				href={website.href}
 				class="cursor-pointer overflow-auto rounded-3xl border-[5px] border-primary bg-primary/10 transition-transform hover:scale-[1.02]"
 			>
-				<img
+				<enhanced:img
 					src={website.image}
 					alt={website.alt}
 					class="mx-auto aspect-video w-full rounded-lg object-cover object-top"
