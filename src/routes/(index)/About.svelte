@@ -9,14 +9,22 @@
 	<div class="relative my-12 w-full lg:my-16">
 		<div class="absolute -right-8 top-16 hidden flex-col items-center lg:flex">
 			<span class="w-fit rotate-90 rounded-md bg-primary p-2 px-5 text-xl text-primary-content">
-				{languageTag() === 'it' ? 'CHI SONO' : 'ABOUT ME'}
+				{#if languageTag() === 'it'}
+					CHI SONO
+				{:else}
+					ABOUT ME
+				{/if}
 			</span>
 			<span class="h-36 w-[2px] bg-[#1a1443]"></span>
 		</div>
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
 			<div class="order-2 flex flex-col items-center justify-center gap-5 lg:order-1">
 				<p class="mb-5 block text-xl font-bold text-primary lg:hidden">
-					{languageTag() === 'it' ? 'Chi sono?' : 'Who am I?'}
+					{#if languageTag() === 'it'}
+						Chi sono?
+					{:else}
+						Who am I?
+					{/if}
 				</p>
 				<p class="text-gray-200">
 					{#if languageTag() === 'it'}
