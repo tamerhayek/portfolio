@@ -33,7 +33,6 @@ export default [
 			'.svelte-kit/',
 			'dist/',
 			'node_modules/',
-			'coverage/',
 			'.DS_Store',
 			'assets',
 			'src/lib/paraglide/*',
