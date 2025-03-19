@@ -40,8 +40,7 @@ export default [
 			'.github',
 			'.pnpm-store',
 			'.env*',
-			'!.env.example',
-			'.vercel/'
+			'!.env.example'
 		]
 	}
 ];
