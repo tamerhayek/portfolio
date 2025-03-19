@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { languageTag } from '$lib/paraglide/runtime';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import { BrandDiscord, BrandTelegram, Mail } from '@steeze-ui/tabler-icons';
 </script>
@@ -7,9 +6,7 @@
 <footer class="w-full py-10">
 	<div class="flex flex-col items-center justify-center gap-5">
 		<p>
-			©{new Date().getFullYear()} Tamer Hayek - {languageTag() === 'it'
-				? 'Tutti i diritti riservati'
-				: 'All rights reserved'}
+			©{new Date().getFullYear()} Tamer Hayek
 		</p>
 		<div class="flex gap-10 pb-5">
 			<a href={'mailto:dev@tamerhayek.com'}>

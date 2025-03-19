@@ -2,55 +2,52 @@
 	"name": "portfolio",
 	"version": "2.1.1",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"start": "PORT=3000 node -r dotenv/config build",
 		"dev": "vite dev",
-		"postinstall": "pnpm inlang:compile",
-		"build": "pnpm inlang:compile && vite build",
+		"build": "vite build",
 		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"test": "pnpm test:integration && pnpm test:unit",
-		"test:setup": "npx playwright install --with-deps",
-		"test:integration": "npx playwright test",
-		"test:unit": "vitest run",
-		"verify": "pnpm format && pnpm check && pnpm lint",
-		"verify:tests": "pnpm format && pnpm check && pnpm lint && pnpm test",
-		"inlang:compile": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide"
+		"lint": "prettier --check . && eslint .",
+		"verify": "pnpm format && pnpm lint && pnpm check"
 	},
 	"devDependencies": {
-		"@inlang/paraglide-js": "^1.11.3",
+		"@eslint/compat": "^1.2.7",
+		"@eslint/js": "^9.22.0",
 		"@steeze-ui/svelte-icon": "^1.6.2",
 		"@steeze-ui/tabler-icons": "^3.3.1",
 		"@sveltejs/adapter-node": "^5.2.12",
 		"@sveltejs/enhanced-img": "^0.4.4",
-		"@sveltejs/kit": "^2.15.0",
+		"@sveltejs/kit": "^2.20.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
-		"@tailwindcss/typography": "^0.5.15",
-		"@types/eslint": "^9.6.1",
-		"autoprefixer": "^10.4.20",
-		"daisyui": "^4.12.22",
-		"eslint": "^9.17.0",
-		"eslint-config-prettier": "^9.1.0",
+		"@tailwindcss/typography": "^0.5.16",
+		"@tailwindcss/vite": "^4.0.14",
+		"daisyui": "^5.0.6",
+		"eslint": "^9.22.0",
+		"eslint-config-prettier": "^10.1.1",
 		"eslint-plugin-svelte": "^2.46.1",
-		"globals": "^15.14.0",
-		"postcss": "^8.4.49",
-		"prettier": "^3.4.2",
-		"prettier-plugin-svelte": "^3.3.2",
-		"prettier-plugin-tailwindcss": "^0.6.9",
-		"svelte": "^5.16.0",
-		"svelte-check": "^4.1.1",
-		"tailwindcss": "^3.4.17",
-		"typescript": "5.5.4",
-		"typescript-eslint": "^8.18.2",
-		"vite": "^6.0.5"
+		"globals": "^15.15.0",
+		"prettier": "^3.5.3",
+		"prettier-plugin-svelte": "^3.3.3",
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"svelte": "^5.23.2",
+		"svelte-check": "^4.1.5",
+		"tailwindcss": "^4.0.14",
+		"typescript": "^5.8.2",
+		"typescript-eslint": "^8.26.1",
+		"vite": "^6.2.2"
 	},
-	"type": "module",
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	},
+	"packageManager": "pnpm@9.15.5+sha512.845196026aab1cc3f098a0474b64dfbab2afe7a1b4e91dd86895d8e4aa32a7a6d03049e2d0ad770bbe4de023a7122fb68c1a1d6e0d033c7076085f9d5d4800d4",
 	"dependencies": {
-		"@fontsource/ubuntu": "^5.1.0",
-		"@inlang/paraglide-sveltekit": "0.11.0"
-	},
-	"packageManager": "pnpm@9.15.5+sha512.845196026aab1cc3f098a0474b64dfbab2afe7a1b4e91dd86895d8e4aa32a7a6d03049e2d0ad770bbe4de023a7122fb68c1a1d6e0d033c7076085f9d5d4800d4"
+		"@fontsource/ubuntu": "^5.2.5"
+	}
 }

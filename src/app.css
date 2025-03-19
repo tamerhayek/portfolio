@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "daisyui";
 
 @layer base {
 	html {
@@ -32,63 +31,6 @@
 		@apply text-sm md:text-base lg:text-lg;
 	}
 	p {
-		@apply text-base text-neutral-content lg:text-lg;
-	}
-}
-
-@supports not (color: oklch(0 0 0)) {
-	:root {
-		color-scheme: light;
-		--fallback-p: #db973a;
-		--fallback-pf: #eb9824;
-		--fallback-pc: #2e2e2e;
-		--fallback-s: #212121;
-		--fallback-sf: #1a1a1a;
-		--fallback-sc: #db971a;
-		--fallback-a: #00cfbd;
-		--fallback-af: #00100d;
-		--fallback-ac: #00100d;
-		--fallback-n: #454545;
-		--fallback-nf: #181818;
-		--fallback-nc: #454545;
-		--fallback-b1: #ebecf0;
-		--fallback-b2: #d1d1d1;
-		--fallback-b3: #adadad;
-		--fallback-bc: #181818;
-		--fallback-in: #00b3f0;
-		--fallback-inc: #000000;
-		--fallback-su: #45b56e;
-		--fallback-suc: #000000;
-		--fallback-wa: #ffc22d;
-		--fallback-wac: #000000;
-		--fallback-er: #96291e;
-		--fallback-erc: #eed4d0;
-	}
-	.dark {
-		color-scheme: dark;
-		--fallback-p: #f0b555;
-		--fallback-pf: #eb9824;
-		--fallback-pc: #212121;
-		--fallback-s: #212121;
-		--fallback-sf: #1a1a1a;
-		--fallback-sc: #f0b554;
-		--fallback-a: #00cfbd;
-		--fallback-af: #00100d;
-		--fallback-ac: #00100d;
-		--fallback-n: #454545;
-		--fallback-nf: #181818;
-		--fallback-nc: #454545;
-		--fallback-b1: #181818;
-		--fallback-b2: #2e2e2e;
-		--fallback-b3: #454545;
-		--fallback-bc: #ebecf0;
-		--fallback-in: #00b3f0;
-		--fallback-inc: #000000;
-		--fallback-su: #45b56e;
-		--fallback-suc: #000000;
-		--fallback-wa: #ffc22d;
-		--fallback-wac: #000000;
-		--fallback-er: #96291e;
-		--fallback-erc: #eed4d0;
+		@apply text-neutral-content text-base lg:text-lg;
 	}
 }

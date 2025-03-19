@@ -1,4 +1,3 @@
-import { i18n } from '$lib/i18n';
 import type { RequestHandler } from '@sveltejs/kit';
 
 export const GET: RequestHandler = async () => {
@@ -12,15 +11,7 @@ export const GET: RequestHandler = async () => {
 		>
 				<url>
 					<loc>https://tamerhayek.com/</loc>
-					<xhtml:link
-						rel="alternate"
-						hreflang="it"
-						href="https://tamerhayek.com" />
-					<xhtml:link
-						rel="alternate"
-						hreflang="en"
-						href="https://tamerhayek.com${i18n.resolveRoute('/', 'en')}" />
-					<lastmod>2024-04-17T00:00:00.000Z</lastmod>
+					<lastmod>2025-03-19T00:00:00.000Z</lastmod>
 					<priority>1.00</priority>
 				</url>
 			</urlset>

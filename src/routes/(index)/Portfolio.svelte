@@ -3,20 +3,19 @@
 		ImageProjectsClarisseGrosseto,
 		ImageProjectsOlymposHub
 	} from '$lib/assets/images/projects';
-	import { languageTag } from '$lib/paraglide/runtime';
 
 	const portfolio = [
 		{
 			title: 'Olympos Hub',
 			image: ImageProjectsOlymposHub,
-			alt: languageTag() === 'it' ? 'Sito Web Olympos Hub' : 'Olympos Hub Website',
+			alt: 'Olympos Hub Website',
 			href: 'https://olymposhub.io',
 			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
 		},
 		{
 			title: 'Polo Culturale Le Clarisse',
 			image: ImageProjectsClarisseGrosseto,
-			alt: languageTag() === 'it' ? 'Sito Web Clarisse Grosseto' : 'Clarisse Grosseto Website',
+			alt: 'Le Clarisse Cultural Centre Website',
 			href: 'https://clarissegrosseto.it',
 			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
 		}
@@ -29,7 +28,7 @@
 		{#each portfolio as website}
 			<a
 				href={website.href}
-				class="cursor-pointer overflow-auto rounded-3xl border-[5px] border-primary bg-primary/10 transition-transform hover:scale-[1.02]"
+				class="border-primary bg-primary/10 cursor-pointer overflow-auto rounded-3xl border-[5px] transition-transform hover:scale-[1.02]"
 			>
 				<enhanced:img
 					src={website.image}
@@ -41,7 +40,7 @@
 					<div class="flex flex-wrap gap-5 py-2">
 						{#each website.skills as skill}
 							<span
-								class="rounded-lg bg-secondary px-2 py-1 text-xs font-bold text-secondary-content xl:text-sm"
+								class="bg-secondary text-secondary-content rounded-lg px-2 py-1 text-xs font-bold xl:text-sm"
 							>
 								{skill}
 							</span>
