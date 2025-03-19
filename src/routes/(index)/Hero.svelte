@@ -11,7 +11,7 @@
 		<h1 class="text-5xl font-bold sm:text-6xl 2xl:text-7xl">Tamer Hayek</h1>
 		<h2 class="text-2xl text-white md:text-3xl lg:text-4xl">Full Stack Developer</h2>
 		<div class="py-5">
-			<a class="btn btn-primary" href={'mailto:dev@tamerhayek.com'}>
+			<a class="btn btn-secondary" href={'mailto:dev@tamerhayek.com'}>
 				Contact me
 				<Icon size="24px" src={Mail} class="transition-all hover:scale-110" />
 			</a>

@@ -43,7 +43,7 @@
 
 <section id="timeline" class="flex w-full flex-col items-center justify-center gap-5 text-center">
 	{#each timeline as event, index}
-		<div class="border-primary flex w-full flex-col gap-5 rounded-xl border-2 p-5 text-left">
+		<div class="border-secondary flex w-full flex-col gap-5 rounded-xl border-2 p-5 text-left">
 			<h3 class="flex flex-wrap items-center gap-2 text-white">
 				{event.title} <span class="badge badge-secondary badge-lg">{event.type}</span>
 			</h3>
@@ -62,7 +62,7 @@
 			</p>
 			<p class="leading-8">{event.description}</p>
 			{#if event.href && event.linkName}
-				<a class="btn btn-primary w-fit" href={event.href}>
+				<a class="btn btn-secondary w-fit" href={event.href}>
 					<Icon size="24px" src={ArrowUpRight} />
 					{event.linkName}
 				</a>
