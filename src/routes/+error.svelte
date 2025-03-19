@@ -9,5 +9,5 @@
 <div class="flex h-full w-full flex-col items-center justify-center gap-4 px-3 py-5">
 	<h1 class="text-8xl">{page.status}</h1>
 	<p>Generic error</p>
-	<a href="/" class="btn btn-secondary"> Go back home </a>
+	<a href="/" class="btn btn-primary"> Go back home </a>
 </div>

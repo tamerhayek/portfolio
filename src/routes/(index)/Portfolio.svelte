@@ -28,7 +28,7 @@
 		{#each portfolio as website}
 			<a
 				href={website.href}
-				class="border-secondary bg-secondary/10 cursor-pointer overflow-auto rounded-3xl border-[5px] transition-transform hover:scale-[1.02]"
+				class="border-primary bg-primary/10 cursor-pointer overflow-auto rounded-3xl border-[5px] transition-transform hover:scale-[1.02]"
 			>
 				<enhanced:img
 					src={website.image}
@@ -40,7 +40,7 @@
 					<div class="flex flex-wrap gap-5 py-2">
 						{#each website.skills as skill}
 							<span
-								class="bg-secondary text-secondary-content rounded-lg px-2 py-1 text-xs font-bold xl:text-sm"
+								class="bg-primary text-primary-content rounded-lg px-2 py-1 text-xs font-bold xl:text-sm"
 							>
 								{skill}
 							</span>

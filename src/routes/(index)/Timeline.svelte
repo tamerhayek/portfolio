@@ -43,15 +43,15 @@
 
 <section id="timeline" class="flex w-full flex-col items-center justify-center gap-5 text-center">
 	{#each timeline as event, index}
-		<div class="border-secondary flex w-full flex-col gap-5 rounded-xl border-2 p-5 text-left">
+		<div class="border-primary flex w-full flex-col gap-5 rounded-xl border-2 p-5 text-left">
 			<h3 class="flex flex-wrap items-center gap-2 text-white">
-				{event.title} <span class="badge badge-secondary badge-lg">{event.type}</span>
+				{event.title} <span class="badge badge-primary badge-lg">{event.type}</span>
 			</h3>
 			<p
 				class="flex items-center gap-2"
 				class:text-gray-400={event.completed}
 				class:italic={!event.completed}
-				class:text-secondary={!event.completed}
+				class:text-primary={!event.completed}
 			>
 				{#if event.completed}
 					<Icon size="24px" src={CalendarCheck} />
@@ -62,14 +62,14 @@
 			</p>
 			<p class="leading-8">{event.description}</p>
 			{#if event.href && event.linkName}
-				<a class="btn btn-secondary w-fit" href={event.href}>
+				<a class="btn btn-primary w-fit" href={event.href}>
 					<Icon size="24px" src={ArrowUpRight} />
 					{event.linkName}
 				</a>
 			{/if}
 		</div>
 		{#if index < timeline.length - 1}
-			<div class="bg-secondary my-2 h-[1px] w-1/2"></div>
+			<div class="bg-primary my-2 h-[1px] w-1/2"></div>
 		{/if}
 	{/each}
 </section>
