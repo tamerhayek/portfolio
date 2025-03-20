@@ -29,12 +29,6 @@ So this application is entirely built using [SvelteKit](https://kit.svelte.dev/)
 
 The design is based on [TailwindCSS](https://tailwindcss.com/) and [DaisyUI](https://daisyui.com/) frameworks.
 
-It is possible to view the website in two different languages thanks to [Inlang ParaglideJS](https://inlang.com/m/gerre34r/library-inlang-paraglideJs).
-The available languages are _english_ and _italian_ and the default one is _italian_.
-
-- `/*` -> [Italian](https://tamerhayek.com)
-- `/en/*` -> [English](https://tamerhayek.com/en)
-
 #### Others
 
 - [fountsource](https://github.com/fontsource/fontsource)
@@ -68,12 +62,6 @@ pnpm install
 
 ### Development commands
 
-#### Inlang
-
-```bash
-pnpm inlang:compile
-```
-
 #### Build
 
 ```bash
@@ -88,15 +76,16 @@ pnpm build
 pnpm dev
 ```
 
-With the host option:
-
-```bash
-pnpm dev:host
-```
-
 #### Production preview mode
 
 ```bash
 pnpm build
 pnpm preview
+```
+
+#### Production build mode
+
+```bash
+pnpm build
+pnpm start
 ```
