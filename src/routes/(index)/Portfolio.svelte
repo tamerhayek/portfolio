@@ -48,12 +48,12 @@
 			<a
 				href={website.href}
 				target="_blank"
-				class="border-primary bg-primary/10 cursor-pointer overflow-auto rounded-box border-4 shadow-sm transition-transform hover:scale-[1.02]"
+				class="border-primary bg-primary/10 rounded-box cursor-pointer overflow-auto border-4 shadow-sm transition-transform hover:scale-[1.02]"
 			>
 				<enhanced:img
 					src={website.image}
 					alt="{website.title} website screenshot"
-					class="mx-auto aspect-video w-full rounded-box object-cover object-top"
+					class="rounded-box mx-auto aspect-video w-full object-cover object-top"
 				/>
 				<div class="flex flex-col gap-3 p-5">
 					<h4 class="font-bold text-white">{website.title}</h4>

@@ -18,7 +18,7 @@
 		</div>
 	</div>
 	<div
-		class="relative order-1 rounded-box border border-[#1b2c68a0] bg-gradient-to-r from-[#0d1224] to-[#0a0d37] lg:order-2"
+		class="rounded-box relative order-1 border border-[#1b2c68a0] bg-gradient-to-r from-[#0d1224] to-[#0a0d37] lg:order-2"
 	>
 		<div class="flex flex-row">
 			<div
