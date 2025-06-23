@@ -2,5 +2,5 @@ import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async () => {
-	return redirect(302, 'https://instagram.com/tamerhayek');
+	return redirect(303, 'https://instagram.com/tamerhayek');
 };
