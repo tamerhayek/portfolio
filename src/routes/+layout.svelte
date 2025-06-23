@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-	<link rel="canonical" href="{page.url.origin}{page.url.pathname}" />
+	<link rel="canonical" href="https://tamerhayek.com{page.url.pathname}" />
 
 	<meta name="application-name" content="Tamer Hayek Portfolio" />
 	<meta name="category" content="Web Development" />
