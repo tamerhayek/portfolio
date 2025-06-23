@@ -34,10 +34,10 @@
 		</h3>
 	</div>
 	<div
-		class="order-2 h-fit overflow-hidden rounded-xl object-contain pe-3 lg:order-1 lg:grow lg:pe-10"
+		class="order-2 h-fit overflow-hidden rounded-box object-contain pe-3 lg:order-1 lg:grow lg:pe-10"
 	>
 		<enhanced:img
-			class="h-full w-full rounded-xl object-cover object-center"
+			class="h-full w-full rounded-box object-cover object-center"
 			src={ImageTechStack}
 			alt="Tech Stack"
 		/>

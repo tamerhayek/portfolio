@@ -8,7 +8,7 @@
 	class="flex w-full flex-col items-center justify-center gap-20 text-center lg:flex-row lg:text-left"
 >
 	<div class="order-2 flex shrink-0 flex-col gap-5 lg:order-1">
-		<h1 class="text-5xl font-bold sm:text-6xl 2xl:text-7xl">Tamer Hayek</h1>
+		<h1 class="text-primary text-5xl font-bold sm:text-6xl 2xl:text-7xl">Tamer Hayek</h1>
 		<h2 class="text-2xl text-white md:text-3xl lg:text-4xl">Full Stack Developer</h2>
 		<div class="py-5">
 			<a class="btn btn-primary" href={'mailto:dev@tamerhayek.com'}>
@@ -18,7 +18,7 @@
 		</div>
 	</div>
 	<div
-		class="relative order-1 rounded-lg border border-[#1b2c68a0] bg-gradient-to-r from-[#0d1224] to-[#0a0d37] lg:order-2"
+		class="relative order-1 rounded-box border border-[#1b2c68a0] bg-gradient-to-r from-[#0d1224] to-[#0a0d37] lg:order-2"
 	>
 		<div class="flex flex-row">
 			<div

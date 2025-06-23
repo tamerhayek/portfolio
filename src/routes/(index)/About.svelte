@@ -8,7 +8,7 @@
 >
 	<div class="relative my-12 w-full lg:my-16">
 		<div class="absolute top-16 -right-8 hidden flex-col items-center lg:flex">
-			<span class="bg-primary text-primary-content w-fit rotate-90 rounded-md p-2 px-5 text-xl">
+			<span class="bg-primary text-primary-content w-fit rotate-90 rounded-box p-2 px-5 text-xl">
 				ABOUT ME
 			</span>
 			<span class="h-36 w-[2px] bg-[#1a1443]"></span>
@@ -27,7 +27,7 @@
 				<enhanced:img
 					src={ImagePortrait}
 					alt="Tamer Hayek portrait"
-					class="w-fit rounded-lg object-contain sm:max-h-[700px] lg:max-h-96"
+					class="w-fit rounded-box object-contain sm:max-h-[700px] lg:max-h-96"
 				/>
 			</div>
 		</div>

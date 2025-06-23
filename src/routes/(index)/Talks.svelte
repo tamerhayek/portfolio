@@ -23,7 +23,7 @@ Infine, faremo un rapido tour del suo ecosistema, da SvelteKit alle principali l
 	<div class="flex flex-col items-center gap-3">
 		{#each talks as { title, description, image, href, slides }, index (href)}
 			<div
-				class="card lg:card-side bg-base-200 border-primary overflow-hidden rounded-2xl border-4 shadow-sm"
+				class="card lg:card-side bg-base-200 border-primary rounded-ee-box overflow-hidden border-4 shadow-sm"
 			>
 				<figure
 					class:order-1={index % 2 === 0}

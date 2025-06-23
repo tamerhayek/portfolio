@@ -3,7 +3,7 @@
 	import { BrandGithub, BrandInstagram, BrandLinkedin } from '@steeze-ui/tabler-icons';
 </script>
 
-<nav id="navbar" class="bg-base-100 fixed top-0 z-50 flex w-full items-center justify-center">
+<nav id="navbar" class="bg-base-200 fixed top-0 z-50 flex w-full items-center justify-center">
 	<div class="flex w-full max-w-6xl items-center justify-between px-5 py-5">
 		<div
 			class="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-gradient-to-b from-teal-200 to-teal-700 object-contain"
