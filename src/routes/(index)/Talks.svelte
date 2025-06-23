@@ -25,15 +25,24 @@ Infine, faremo un rapido tour del suo ecosistema, da SvelteKit alle principali l
 			<div
 				class="card lg:card-side bg-base-200 border-primary overflow-hidden rounded-2xl border-4 shadow-sm"
 			>
-				<figure class="shrink-0 overflow-hidden rounded-none">
+				<figure
+					class:order-1={index % 2 === 0}
+					class:order-2={index % 2 === 1}
+					class="shrink-0 !rounded-none"
+				>
 					<enhanced:img
 						src={image}
 						alt="{title} photo"
 						class="h-full object-cover object-center lg:max-w-lg"
 					/>
 				</figure>
-				<div class="card-body gap-5">
+				<div
+					class="card-body gap-5"
+					class:order-2={index % 2 === 0}
+					class:order-1={index % 2 === 1}
+				>
 					<h4 class="card-title text-2xl">{title}</h4>
+					<!-- eslint-disable svelte/no-at-html-tags -->
 					<p>{@html description}</p>
 					<div class="card-actions justify-end">
 						<a href={slides} target="_blank" rel="noopener noreferrer" class="btn btn-outline">

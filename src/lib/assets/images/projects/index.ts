@@ -3,4 +3,3 @@ export { default as ImageProjectsIlGenioTestardo } from '$lib/assets/images/proj
 export { default as ImageProjectsOlymposHub } from '$lib/assets/images/projects/olymposhub.webp?enhanced';
 export { default as ImageProjectsClarisseGrosseto } from '$lib/assets/images/projects/polo_culturale_le_clarisse.webp?enhanced';
 export { default as ImageProjectsPortfolio } from '$lib/assets/images/projects/portfolio.webp?enhanced';
-
