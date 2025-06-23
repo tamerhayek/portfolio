@@ -43,7 +43,7 @@
 
 	body {
 		@apply bg-base-100 text-base-content;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Ubuntu', sans-serif;
 	}
 
 	/* Typography */
