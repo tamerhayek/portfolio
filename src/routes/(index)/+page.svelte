@@ -5,6 +5,7 @@
 	import Hero from './Hero.svelte';
 	import Portfolio from './Portfolio.svelte';
 	import Stack from './Stack.svelte';
+	import Talks from './Talks.svelte';
 	import Timeline from './Timeline.svelte';
 </script>
 
@@ -48,4 +49,6 @@
 	<Timeline />
 
 	<Portfolio />
+
+	<Talks />
 </div>

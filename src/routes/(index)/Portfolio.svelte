@@ -48,7 +48,7 @@
 			<a
 				href={website.href}
 				target="_blank"
-				class="border-primary bg-primary/10 cursor-pointer overflow-auto rounded-3xl border-[5px] transition-transform hover:scale-[1.02]"
+				class="border-primary bg-primary/10 cursor-pointer overflow-auto rounded-3xl border-4 shadow-sm transition-transform hover:scale-[1.02]"
 			>
 				<enhanced:img
 					src={website.image}
