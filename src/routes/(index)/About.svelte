@@ -11,7 +11,7 @@
 			<span class="bg-primary text-primary-content rounded-box w-fit rotate-90 p-2 px-5 text-xl">
 				ABOUT ME
 			</span>
-			<span class="h-36 w-[2px] bg-[#1a1443]"></span>
+			<span class="rounded-box bg-primary h-36 w-[2px]"></span>
 		</div>
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
 			<div class="order-2 flex flex-col items-center justify-center gap-5 lg:order-1">
