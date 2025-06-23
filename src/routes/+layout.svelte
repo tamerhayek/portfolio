@@ -1,10 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { PUBLIC_UMAMI_WEBSITE_ID } from '$env/static/public';
+	import '@fontsource/press-start-2p';
 	import '@fontsource/ubuntu';
-	import '@fontsource/ubuntu/300.css';
-	import '@fontsource/ubuntu/400-italic.css';
-	import '@fontsource/ubuntu/700.css';
 	import type { Snippet } from 'svelte';
 	import '../app.css';
 	import Footer from './Footer.svelte';

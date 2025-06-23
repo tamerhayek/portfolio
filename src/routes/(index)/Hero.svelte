@@ -5,11 +5,11 @@
 
 <section
 	id="home"
-	class="flex w-full flex-col items-center justify-center gap-20 text-center lg:flex-row lg:text-left"
+	class="flex w-full flex-col items-center justify-center gap-10 text-center lg:flex-row lg:text-left"
 >
 	<div class="order-2 flex shrink-0 flex-col gap-5 lg:order-1">
-		<h1 class="text-primary text-5xl font-bold sm:text-6xl 2xl:text-7xl">Tamer Hayek</h1>
-		<h2 class="text-2xl text-white md:text-3xl lg:text-4xl">Full Stack Developer</h2>
+		<h1 class="font-press-start text-primary text-5xl font-bold">Tamer Hayek</h1>
+		<h2 class="text-2xl text-white md:text-3xl">Full Stack Developer</h2>
 		<div class="py-5">
 			<a class="btn btn-primary" href={'mailto:dev@tamerhayek.com'}>
 				Contact me

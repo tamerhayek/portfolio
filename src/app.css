@@ -68,4 +68,8 @@
 	p {
 		@apply text-neutral-content text-base lg:text-lg;
 	}
+
+	.font-press-start {
+		font-family: 'Press Start 2P', system-ui;
+	}
 }
