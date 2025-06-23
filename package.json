@@ -4,7 +4,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"start": "PORT=3000 node -r dotenv/config build",
+		"start": "node --env-file=.env build",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
