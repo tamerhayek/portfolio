@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Icon } from '@steeze-ui/svelte-icon';
-	import { ArrowUpRight, Calendar, CalendarCheck } from '@steeze-ui/tabler-icons';
+	import { ArrowUpRight, CircleCheck, Progress } from '@steeze-ui/tabler-icons';
 
 	const timeline = [
 		{
@@ -35,41 +35,63 @@
 			type: 'Education',
 			date: 'May 2023',
 			completed: true,
-			href: 'https://www.udemy.com/certificate/UC-688266d7-9300-41c8-94da-3b2933c081b4/',
+			href: 'https://ude.my/UC-688266d7-9300-41c8-94da-3b2933c081b4/',
+			linkName: 'Certificate'
+		},
+		{
+			title: 'Master Svelte 5 & SvelteKit',
+			description:
+				'Course for Sveltekit provided by Udemy. Credential ID: UC-7fe1dca3-016e-4781-b4d4-45fb3515ebd5',
+			type: 'Education',
+			date: 'December 2024',
+			completed: true,
+			href: 'https://ude.my/UC-7fe1dca3-016e-4781-b4d4-45fb3515ebd5',
 			linkName: 'Certificate'
 		}
 	];
 </script>
 
 <section id="timeline" class="flex w-full flex-col items-center justify-center gap-5 text-center">
-	{#each timeline as event, index}
-		<div class="border-primary flex w-full flex-col gap-5 rounded-xl border-2 p-5 text-left">
-			<h3 class="flex flex-wrap items-center gap-2 text-white">
-				{event.title} <span class="badge badge-primary badge-lg">{event.type}</span>
-			</h3>
-			<p
-				class="flex items-center gap-2"
-				class:text-gray-400={event.completed}
-				class:italic={!event.completed}
-				class:text-primary={!event.completed}
-			>
-				{#if event.completed}
-					<Icon size="24px" src={CalendarCheck} />
-				{:else}
-					<Icon size="24px" src={Calendar} />
-				{/if}
-				{event.date}
-			</p>
-			<p class="leading-8">{event.description}</p>
-			{#if event.href && event.linkName}
-				<a class="btn btn-primary w-fit" href={event.href}>
-					<Icon size="24px" src={ArrowUpRight} />
-					{event.linkName}
-				</a>
-			{/if}
-		</div>
-		{#if index < timeline.length - 1}
-			<div class="bg-primary my-2 h-[1px] w-1/2"></div>
-		{/if}
-	{/each}
+	<ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+		{#each timeline as { title, description, date, type, href, linkName, completed }, index}
+			<li>
+				<div class="timeline-middle">
+					<Icon size="30px" src={completed ? CircleCheck : Progress} />
+				</div>
+				<div
+					class:timeline-end={index % 2 === 1}
+					class:md:text-end={index % 2 === 0}
+					class:timeline-start={index % 2 === 0}
+					class:md:text-start={index % 2 === 1}
+					class:items-end={index % 2 === 0}
+					class:items-start={index % 2 === 1}
+					class="mx-4 mb-20 flex flex-col gap-3 text-start"
+				>
+					<time class="mt-2 font-mono italic">{date}</time>
+					<h3
+						class:md:justify-end={index % 2 === 0}
+						class="flex items-center gap-2 text-xl font-black"
+					>
+						<span class:order-2={index % 2 === 0} class:order-1={index % 2 === 1}>{title}</span>
+						<span
+							class:md:order-1={index % 2 === 0}
+							class:md:order-2={index % 2 === 1}
+							class="badge badge-primary badge-lg">{type}</span
+						>
+					</h3>
+					<p class="leading-8">
+						<!-- eslint-disable svelte/no-at-html-tags -->
+						{@html description}
+					</p>
+					{#if href && linkName}
+						<a class="btn btn-primary w-fit" {href}>
+							{linkName}
+							<Icon size="20px" src={ArrowUpRight} />
+						</a>
+					{/if}
+				</div>
+				<hr />
+			</li>
+		{/each}
+	</ul>
 </section>
