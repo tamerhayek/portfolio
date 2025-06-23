@@ -1,22 +1,41 @@
 <script lang="ts">
 	import {
 		ImageProjectsClarisseGrosseto,
-		ImageProjectsOlymposHub
+		ImageProjectsGlaStablesEquitazione,
+		ImageProjectsIlGenioTestardo,
+		ImageProjectsOlymposHub,
+		ImageProjectsPortfolio
 	} from '$lib/assets/images/projects';
 
 	const portfolio = [
 		{
+			title: 'Portfolio',
+			image: ImageProjectsPortfolio,
+			href: 'https://tamerhayek.com',
+			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
+		},
+		{
 			title: 'Olympos Hub',
 			image: ImageProjectsOlymposHub,
-			alt: 'Olympos Hub Website',
 			href: 'https://olymposhub.io',
 			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
 		},
 		{
 			title: 'Polo Culturale Le Clarisse',
 			image: ImageProjectsClarisseGrosseto,
-			alt: 'Le Clarisse Cultural Centre Website',
 			href: 'https://clarissegrosseto.it',
+			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
+		},
+		{
+			title: 'Il Genio Testardo',
+			image: ImageProjectsIlGenioTestardo,
+			href: 'https://ilgeniotestardo.org',
+			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
+		},
+		{
+			title: 'GLA Stables Equitazione',
+			image: ImageProjectsGlaStablesEquitazione,
+			href: 'https://glastablesequitazione.com',
 			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
 		}
 	];
@@ -28,11 +47,12 @@
 		{#each portfolio as website}
 			<a
 				href={website.href}
+				target="_blank"
 				class="border-primary bg-primary/10 cursor-pointer overflow-auto rounded-3xl border-[5px] transition-transform hover:scale-[1.02]"
 			>
 				<enhanced:img
 					src={website.image}
-					alt={website.alt}
+					alt="{website.title} website screenshot"
 					class="mx-auto aspect-video w-full rounded-lg object-cover object-top"
 				/>
 				<div class="flex flex-col gap-3 p-5">
@@ -40,7 +60,7 @@
 					<div class="flex flex-wrap gap-5 py-2">
 						{#each website.skills as skill}
 							<span
-								class="bg-primary text-primary-content rounded-lg px-2 py-1 text-xs font-bold xl:text-sm"
+								class="bg-primary/50 text-primary-content rounded-lg px-2 py-1 text-xs font-bold xl:text-sm"
 							>
 								{skill}
 							</span>
