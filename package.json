@@ -21,7 +21,7 @@
 		"@steeze-ui/svelte-icon": "^1.6.2",
 		"@steeze-ui/tabler-icons": "^3.3.1",
 		"@sveltejs/adapter-node": "^5.2.12",
-		"@sveltejs/enhanced-img": "^0.4.4",
+		"@sveltejs/enhanced-img": "^0.6.0",
 		"@sveltejs/kit": "^2.22.0",
 		"@sveltejs/vite-plugin-svelte": "^5.1.0",
 		"@tailwindcss/typography": "^0.5.16",
