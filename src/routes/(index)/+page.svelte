@@ -38,7 +38,7 @@
 	<meta property="twitter:image" content="https://tamerhayek.com/avatar.webp" />
 </svelte:head>
 
-<div class="flex min-h-screen w-full max-w-7xl flex-col items-center justify-center gap-20 px-5">
+<div class="flex min-h-screen w-full max-w-7xl flex-col items-center justify-center gap-32 px-5">
 	<Hero />
 
 	<About />

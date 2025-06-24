@@ -41,9 +41,9 @@
 	];
 </script>
 
-<section id="portfolio" class="my-5 flex min-h-screen flex-col items-center justify-center">
+<section id="portfolio" class="my-5 flex min-h-screen flex-col items-center justify-center gap-10">
 	<h3 class="text-center text-4xl font-bold tracking-tight text-white sm:text-5xl">Showroom</h3>
-	<div class="grid grid-cols-1 gap-10 py-10 md:grid-cols-2">
+	<div class="grid grid-cols-1 gap-10 md:grid-cols-2">
 		{#each portfolio as website}
 			<a
 				href={website.href}

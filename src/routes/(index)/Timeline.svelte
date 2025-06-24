@@ -30,8 +30,7 @@
 		},
 		{
 			title: 'React.js & Redux',
-			description:
-				'Course for React.js and Redux.js provided by Udemy. <br /> <br /> Credential ID: UC-688266d7-9300-41c8-94da-3b2933c081b4',
+			description: 'Course for React.js and Redux.js provided by Udemy.',
 			type: 'Education',
 			date: 'May 2023',
 			completed: true,
@@ -40,8 +39,7 @@
 		},
 		{
 			title: 'Master Svelte 5 & SvelteKit',
-			description:
-				'Course for Svelte 5 and Sveltekit provided by Udemy. <br /> <br /> Credential ID: UC-7fe1dca3-016e-4781-b4d4-45fb3515ebd5',
+			description: 'Course for Svelte 5 and Sveltekit provided by Udemy.',
 			type: 'Education',
 			date: 'December 2024',
 			completed: true,
@@ -51,7 +49,8 @@
 	];
 </script>
 
-<section id="timeline" class="flex w-full flex-col items-center justify-center gap-5 text-center">
+<section id="timeline" class="my-5 flex min-h-screen flex-col items-center justify-center gap-10">
+	<h3 class="text-center text-4xl font-bold tracking-tight text-white sm:text-5xl">Timeline</h3>
 	<ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
 		{#each timeline as { title, description, date, type, href, linkName, completed }, index}
 			<li>
@@ -68,7 +67,7 @@
 					class="mx-4 mb-20 flex flex-col gap-5 text-start"
 				>
 					<time class="mt-2 font-mono text-sm italic md:text-base">{date}</time>
-					<h3
+					<h4
 						class:md:justify-end={index % 2 === 0}
 						class="flex flex-col gap-2 text-lg font-black md:flex-row md:items-center md:text-xl"
 					>
@@ -80,13 +79,13 @@
 							class:md:order-2={index % 2 === 1}
 							class="badge badge-primary badge-sm md:badge-lg">{type}</span
 						>
-					</h3>
+					</h4>
 					<p class="text-base leading-8">
 						<!-- eslint-disable svelte/no-at-html-tags -->
 						{@html description}
 					</p>
 					{#if href && linkName}
-						<a class="btn btn-primary btn-sm md:btn-lg w-fit" {href}>
+						<a class="btn btn-primary btn-sm md:btn-md w-fit" {href}>
 							{linkName}
 							<Icon size="20px" src={ArrowUpRight} />
 						</a>

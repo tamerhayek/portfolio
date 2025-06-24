@@ -3,8 +3,12 @@
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import {
 		BrandCss3,
+		BrandDocker,
+		BrandGit,
+		BrandGolang,
 		BrandHtml5,
 		BrandJavascript,
+		BrandMongodb,
 		BrandNodejs,
 		BrandSvelte,
 		BrandTailwind,
@@ -23,15 +27,19 @@
 			<Icon size="60px" src={BrandCss3} class="transition-colors hover:text-blue-600" />
 			<Icon size="60px" src={BrandJavascript} class="transition-colors hover:text-yellow-500" />
 			<Icon size="60px" src={BrandTypescript} class="transition-colors hover:text-blue-700" />
-			<Icon size="60px" src={BrandSvelte} class="transition-colors hover:text-orange-500" />
 			<Icon size="60px" src={BrandTailwind} class="transition-colors hover:text-blue-500" />
 			<Icon size="60px" src={BrandNodejs} class="transition-colors hover:text-green-500" />
-			<Icon size="60px" src={Sql} class="transition-colors hover:text-blue-600" />
+			<Icon size="60px" src={BrandSvelte} class="transition-colors hover:text-orange-500" />
+			<Icon size="60px" src={BrandGolang} class="transition-colors hover:text-blue-500" />
+			<Icon size="60px" src={Sql} class="transition-colors hover:text-pink-600" />
+			<Icon size="60px" src={BrandMongodb} class="transition-colors hover:text-green-600" />
+			<Icon size="60px" src={BrandGit} class="transition-colors hover:text-red-500" />
+			<Icon size="60px" src={BrandDocker} class="transition-colors hover:text-blue-500" />
 		</div>
-		<h3 class="text-neutral-content py-2 text-base leading-8 md:text-xl lg:max-w-2xl lg:text-xl">
+		<p class="text-neutral-content py-2 text-xl leading-8 lg:max-w-2xl">
 			Capable of building web applications from scratch using various programming languages,
 			frameworks, and libraries.
-		</h3>
+		</p>
 	</div>
 	<div
 		class="rounded-box order-2 h-fit overflow-hidden object-contain pe-3 lg:order-1 lg:grow lg:pe-10"

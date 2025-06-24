@@ -37,7 +37,7 @@
 			class="overflow-hidden border-t-[2px] border-indigo-900 px-4 py-4 text-left lg:px-8 lg:py-8"
 		>
 			<code class="font-mono text-xs md:text-sm lg:text-base">
-				<div class="blink">
+				<div>
 					<span class="text-pink-500">const</span>
 					<span class="text-white">programmer</span>
 					<span class="text-pink-500">=</span>
@@ -64,11 +64,11 @@
 					<span class="text-gray-400">{', '}</span>
 					<span class="text-amber-300">'SvelteKit'</span>
 					<span class="text-gray-400">{', '}</span>
-					<span class="text-amber-300">'React'</span>
-					<span class="text-gray-400">{', '}</span>
-					<span class="text-amber-300">'NextJS'</span>
+					<span class="text-amber-300">'Go'</span>
 					<span class="text-gray-400">{', '}</span>
 					<span class="text-amber-300">'Docker'</span>
+					<span class="text-gray-400">{', '}</span>
+					<span class="text-amber-300">'Pocketbase'</span>
 					<span class="text-gray-400">{', '}</span>
 					<span class="text-amber-300">'PostgreSql'</span>
 					<span class="text-gray-400">{', '}</span>
