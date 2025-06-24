@@ -72,9 +72,9 @@
 						class:md:justify-end={index % 2 === 0}
 						class="flex flex-col gap-2 text-lg font-black md:flex-row md:items-center md:text-xl"
 					>
-						<span class:md:order-2={index % 2 === 0} class:md:order-1={index % 2 === 1}
-							>{title}</span
-						>
+						<span class:md:order-2={index % 2 === 0} class:md:order-1={index % 2 === 1}>
+							{title}
+						</span>
 						<span
 							class:md:order-1={index % 2 === 0}
 							class:md:order-2={index % 2 === 1}
