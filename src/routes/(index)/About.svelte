@@ -16,7 +16,7 @@
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
 			<div class="order-2 flex flex-col items-center justify-center gap-5 lg:order-1">
 				<h3 class="mb-5 block text-3xl font-bold lg:hidden">About me</h3>
-				<p class="text-xl leading-8 text-gray-200">
+				<p class="text-lg leading-8 text-gray-200 lg:text-xl">
 					Software Engineer with a focus on full-stack development, driven by innovation and the
 					creation of efficient, scalable solutions. I’m dedicated to combining intuitive design
 					with robust architectures, leveraging modern technologies and agile methodologies. Always

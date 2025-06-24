@@ -36,7 +36,7 @@
 			<Icon size="60px" src={BrandGit} class="transition-colors hover:text-red-500" />
 			<Icon size="60px" src={BrandDocker} class="transition-colors hover:text-blue-500" />
 		</div>
-		<p class="text-neutral-content py-2 text-xl leading-8 lg:max-w-2xl">
+		<p class="text-neutral-content py-2 text-lg leading-8 lg:max-w-2xl lg:text-xl">
 			Capable of building web applications from scratch using various programming languages,
 			frameworks, and libraries.
 		</p>
