@@ -52,7 +52,7 @@
 <section id="timeline" class="my-5 flex min-h-screen flex-col items-center justify-center gap-10">
 	<h3 class="text-center text-4xl font-bold tracking-tight text-white sm:text-5xl">Timeline</h3>
 	<ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-		{#each timeline as { title, description, date, type, href, linkName, completed }, index}
+		{#each timeline as { title, description, date, type, href, linkName, completed }, index (index)}
 			<li>
 				<div class="timeline-middle">
 					<Icon size="30px" src={completed ? CircleCheck : Progress} />

@@ -11,7 +11,7 @@
 		<h1 class="font-press-start text-primary text-5xl font-bold">Tamer Hayek</h1>
 		<h2 class="text-2xl text-white md:text-3xl">Full Stack Developer</h2>
 		<div class="py-5">
-			<a class="btn btn-primary" href={'mailto:dev@tamerhayek.com'}>
+			<a class="btn btn-primary" href="mailto:dev@tamerhayek.com">
 				Contact me
 				<Icon size="24px" src={Mail} class="transition-all hover:scale-110" />
 			</a>
@@ -49,31 +49,31 @@
 				</div>
 				<div class="ml-4 lg:ml-8">
 					<span class="text-white">skills:</span>
-					<span class="text-gray-400">{`[`}</span>
+					<span class="text-gray-400">[</span>
 					<span class="text-amber-300">'HTML5'</span>
-					<span class="text-gray-400">{', '}</span>
+					<span class="text-gray-400">, </span>
 					<span class="text-amber-300">'CSS3'</span>
-					<span class="text-gray-400">{', '}</span>
+					<span class="text-gray-400">, </span>
 					<span class="text-amber-300">'Javascript'</span>
-					<span class="text-gray-400">{', '}</span>
+					<span class="text-gray-400">, </span>
 					<span class="text-amber-300">'Typescript'</span>
-					<span class="text-gray-400">{', '}</span>
+					<span class="text-gray-400">, </span>
 					<span class="text-amber-300">'NodeJS'</span>
-					<span class="text-gray-400">{', '}</span>
+					<span class="text-gray-400">, </span>
 					<span class="text-amber-300">'Svelte'</span>
-					<span class="text-gray-400">{', '}</span>
+					<span class="text-gray-400">, </span>
 					<span class="text-amber-300">'SvelteKit'</span>
-					<span class="text-gray-400">{', '}</span>
+					<span class="text-gray-400">, </span>
 					<span class="text-amber-300">'Go'</span>
-					<span class="text-gray-400">{', '}</span>
+					<span class="text-gray-400">, </span>
 					<span class="text-amber-300">'Docker'</span>
-					<span class="text-gray-400">{', '}</span>
+					<span class="text-gray-400">, </span>
 					<span class="text-amber-300">'Pocketbase'</span>
-					<span class="text-gray-400">{', '}</span>
+					<span class="text-gray-400">, </span>
 					<span class="text-amber-300">'PostgreSql'</span>
-					<span class="text-gray-400">{', '}</span>
+					<span class="text-gray-400">, </span>
 					<span class="text-amber-300">'MongoDB'</span>
-					<span class="text-gray-400">{'],'}</span>
+					<span class="text-gray-400">],</span>
 				</div>
 				<div>
 					<span class="ml-4 text-white lg:ml-8">hardWorker:</span>
@@ -88,7 +88,7 @@
 					<span class="text-orange-400">true</span>,
 				</div>
 				<div>
-					<span class="text-gray-400">{`};`}</span>
+					<span class="text-gray-400">};</span>
 				</div>
 			</code>
 		</div>
