@@ -19,6 +19,7 @@ services:
       - traefik.http.routers.portfolio.rule=Host(`demo.tamerhayek.com`)
       - traefik.http.routers.portfolio.entrypoints=websecure
       - traefik.http.routers.portfolio.tls=true
+      - traefik.http.routers.portfolio.tls.certresolver=le
       - traefik.http.routers.portfolio.middlewares=portfolio-auth
 
       # Basic Auth middleware

@@ -19,11 +19,13 @@ services:
       - traefik.http.routers.portfolio.rule=Host(`tamerhayek.com`)
       - traefik.http.routers.portfolio.entrypoints=websecure
       - traefik.http.routers.portfolio.tls=true
+      - traefik.http.routers.portfolio.tls.certresolver=le
 
       # --- Router redirect (www.tamerhayek.com -> tamerhayek.com) ---
       - traefik.http.routers.portfolio-www.rule=Host(`www.tamerhayek.com`)
       - traefik.http.routers.portfolio-www.entrypoints=websecure
       - traefik.http.routers.portfolio-www.tls=true
+      - traefik.http.routers.portfolio-www.tls.certresolver=le
       - traefik.http.routers.portfolio-www.middlewares=redirect-www-to-root
 
       # Middleware redirect: www -> non-www
