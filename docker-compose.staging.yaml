@@ -1,0 +1,35 @@
+services:
+  portfolio:
+    container_name: portfolio
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        - PUBLIC_UMAMI_WEBSITE_ID=${PUBLIC_UMAMI_WEBSITE_ID:-""}
+    environment:
+      - PUBLIC_UMAMI_WEBSITE_ID=${PUBLIC_UMAMI_WEBSITE_ID:-""}
+    restart: unless-stopped
+    networks:
+      - proxy
+    labels:
+      - traefik.enable=true
+      - traefik.http.services.portfolio.loadbalancer.server.port=3000
+
+      # --- demo.tamerhayek.com ---
+      - traefik.http.routers.portfolio.rule=Host(`demo.tamerhayek.com`)
+      - traefik.http.routers.portfolio.entrypoints=websecure
+      - traefik.http.routers.portfolio.tls=true
+      - traefik.http.routers.portfolio.middlewares=portfolio-auth
+
+      # Basic Auth middleware
+      - traefik.http.middlewares.portfolio-auth.basicauth.users=tamerhayek:$$apr1$$TnaeRtrr$$RR3ku5NtHe8SmZukk8cJx/
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://portfolio:3000 || exit 1
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+networks:
+  proxy:
+    external: true

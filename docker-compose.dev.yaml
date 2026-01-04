@@ -1,0 +1,19 @@
+services:
+  portfolio:
+    container_name: portfolio
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        - PUBLIC_UMAMI_WEBSITE_ID=${PUBLIC_UMAMI_WEBSITE_ID:-""}
+    environment:
+      - PUBLIC_UMAMI_WEBSITE_ID=${PUBLIC_UMAMI_WEBSITE_ID:-""}
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://portfolio:3000 || exit 1
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
