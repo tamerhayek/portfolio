@@ -24,7 +24,7 @@ services:
       # Basic Auth middleware
       - traefik.http.middlewares.portfolio-demo-auth.basicauth.users=tamerhayek:$$apr1$$TnaeRtrr$$RR3ku5NtHe8SmZukk8cJx/
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1
+      test: wget --no-verbose --tries=1 --spider http://127.0.0.1:3000 || exit 1
       interval: 30s
       timeout: 5s
       retries: 3

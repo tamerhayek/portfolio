@@ -27,7 +27,7 @@ services:
       - traefik.http.routers.portfolio-www.tls.certresolver=le
       - traefik.http.routers.portfolio-www.middlewares=redirect-www-to-non-www
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1
+      test: wget --no-verbose --tries=1 --spider http://127.0.0.1:3000 || exit 1
       interval: 30s
       timeout: 5s
       retries: 3
