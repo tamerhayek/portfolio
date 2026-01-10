@@ -1,6 +1,6 @@
 services:
-  portfolio:
-    container_name: portfolio
+  website:
+    container_name: website
     build:
       context: ./
       dockerfile: ./Dockerfile
@@ -12,7 +12,7 @@ services:
     ports:
       - 3000:3000
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://portfolio:3000 || exit 1
+      test: wget --no-verbose --tries=1 --spider http://website:3000 || exit 1
       interval: 30s
       timeout: 5s
       retries: 3

@@ -1,6 +1,6 @@
 services:
-  portfolio:
-    container_name: portfolio
+  website:
+    container_name: website
     build:
       context: ./
       dockerfile: ./Dockerfile
@@ -33,7 +33,7 @@ services:
       - traefik.http.middlewares.redirect-www-to-root.redirectregex.replacement=https://$${1}
       - traefik.http.middlewares.redirect-www-to-root.redirectregex.permanent=true
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://portfolio:3000 || exit 1
+      test: wget --no-verbose --tries=1 --spider http://website:3000 || exit 1
       interval: 30s
       timeout: 5s
       retries: 3
