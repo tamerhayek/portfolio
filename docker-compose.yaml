@@ -1,6 +1,5 @@
 services:
   website:
-    container_name: website
     build:
       context: ./
       dockerfile: ./Dockerfile
@@ -26,14 +25,9 @@ services:
       - traefik.http.routers.portfolio-www.entrypoints=websecure
       - traefik.http.routers.portfolio-www.tls=true
       - traefik.http.routers.portfolio-www.tls.certresolver=le
-      - traefik.http.routers.portfolio-www.middlewares=redirect-www-to-root
-
-      # Middleware redirect: www -> non-www
-      - traefik.http.middlewares.redirect-www-to-root.redirectregex.regex=^https?://www\.(.+)
-      - traefik.http.middlewares.redirect-www-to-root.redirectregex.replacement=https://$${1}
-      - traefik.http.middlewares.redirect-www-to-root.redirectregex.permanent=true
+      - traefik.http.routers.portfolio-www.middlewares=redirect-www-to-non-www
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://website:3000 || exit 1
+      test: wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1
       interval: 30s
       timeout: 5s
       retries: 3
