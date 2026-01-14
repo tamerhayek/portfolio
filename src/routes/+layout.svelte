@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { PUBLIC_UMAMI_WEBSITE_ID } from '$env/static/public';
+	import { Footer, Navbar } from '$lib/components';
 	import '@fontsource/press-start-2p';
 	import '@fontsource/ubuntu';
 	import type { Snippet } from 'svelte';
-	import '../app.css';
-	import Footer from './Footer.svelte';
-	import Navbar from './Navbar.svelte';
+	import './layout.css';
 
 	interface Props {
 		children: Snippet;
