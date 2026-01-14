@@ -1,0 +1,75 @@
+name: Production
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ci-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read pnpm version from package.json
+        id: pnpmv
+        shell: bash
+        run: |
+          PM="$(node -p "require('./package.json').packageManager")"
+          echo "packageManager=$PM"
+          echo "version=${PM#pnpm@}" >> "$GITHUB_OUTPUT"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ steps.pnpmv.outputs.version }}
+
+      - name: Setup Node (from .nvmrc)
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Format
+        run: pnpm format
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Check
+        run: pnpm check
+        env:
+          PUBLIC_UMAMI_WEBSITE_ID: ''
+
+  deploy:
+    needs: quality
+    runs-on: ubuntu-latest
+
+    environment:
+      name: production
+      url: https://tamerhayek.com
+
+    steps:
+      - name: Deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          port: ${{ secrets.DEPLOY_PORT || 22 }}
+          script: |
+            set -e
+            echo "Deploying (production) portfolio..."
+            ~/.local/bin/devops update portfolio
