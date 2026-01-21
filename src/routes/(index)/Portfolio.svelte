@@ -4,6 +4,7 @@
 		ImageProjectsGlaStablesEquitazione,
 		ImageProjectsIlGenioTestardo,
 		ImageProjectsOlymposHub,
+		ImageProjectsPonySeries,
 		ImageProjectsPortfolio
 	} from '$lib/assets/images/projects';
 
@@ -37,6 +38,12 @@
 			image: ImageProjectsGlaStablesEquitazione,
 			href: 'https://glastablesequitazione.com',
 			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS', 'DaisyUI']
+		},
+		{
+			title: 'Pony Series',
+			image: ImageProjectsPonySeries,
+			href: 'https://ponyseries.com',
+			skills: ['HTML5', 'CSS3', 'Typescript', 'SvelteKit', 'TailwindCSS']
 		}
 	];
 </script>
