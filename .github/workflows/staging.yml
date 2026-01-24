@@ -72,4 +72,7 @@ jobs:
           script: |
             set -e
             echo "Deploying (staging) portfolio..."
-            ~/.local/bin/devops update portfolio-demo
+            cd ~/applications/staging/portfolio-demo
+            git pull --rebase
+            docker compose -f docker-compose.staging.yaml up -d --build
+
