@@ -12,13 +12,14 @@ services:
       - proxy
     labels:
       - traefik.enable=true
+      - traefik.docker.network=proxy
       - traefik.http.services.portfolio-demo.loadbalancer.server.port=3000
 
       # --- demo.tamerhayek.com ---
       - traefik.http.routers.portfolio-demo.rule=Host(`demo.tamerhayek.com`)
       - traefik.http.routers.portfolio-demo.entrypoints=websecure
       - traefik.http.routers.portfolio-demo.tls=true
-      - traefik.http.routers.portfolio-demo.tls.certresolver=le
+      - traefik.http.routers.portfolio-demo.tls.certresolver=letsencrypt
       - traefik.http.routers.portfolio-demo.middlewares=portfolio-demo-auth
 
       # Basic Auth middleware
