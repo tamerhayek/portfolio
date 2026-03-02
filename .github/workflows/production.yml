@@ -50,8 +50,6 @@ jobs:
 
       - name: Check
         run: pnpm check
-        env:
-          PUBLIC_UMAMI_WEBSITE_ID: ''
 
   deploy:
     needs: quality
