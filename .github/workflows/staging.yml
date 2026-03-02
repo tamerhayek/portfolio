@@ -50,8 +50,6 @@ jobs:
 
       - name: Check
         run: pnpm check
-        env:
-          PUBLIC_UMAMI_WEBSITE_ID: ''
 
   deploy:
     needs: quality
@@ -72,7 +70,4 @@ jobs:
           script: |
             set -e
             echo "Deploying (staging) portfolio..."
-            cd ~/applications/staging/portfolio-demo
-            git pull --rebase
-            docker compose -f docker-compose.staging.yaml up -d --build
-
+            devops update portfolio-demo
