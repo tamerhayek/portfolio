@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { PUBLIC_UMAMI_WEBSITE_ID } from '$env/static/public';
 	import { Footer, Navbar } from '$lib/components';
 	import '@fontsource/press-start-2p';
 	import '@fontsource/ubuntu';
@@ -26,13 +25,12 @@
 	/>
 
 	<!-- Umami -->
-	{#if PUBLIC_UMAMI_WEBSITE_ID}
-		<script
-			defer
-			src="https://analytics.tamerhayek.com/script.js"
-			data-website-id={PUBLIC_UMAMI_WEBSITE_ID}
-		></script>
-	{/if}
+	<script
+		defer
+		src="https://analytics.tamerhayek.com/script.js"
+		data-website-id="3289478a-168c-42ec-90e5-b0232518ac67"
+		data-domains="tamerhayek.com"
+	></script>
 	<!-- End Umami -->
 </svelte:head>
 
