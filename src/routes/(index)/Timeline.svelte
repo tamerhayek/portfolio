@@ -10,17 +10,16 @@
 			date: '2019 - in progress',
 			completed: false
 		},
-		{
-			title: 'Software Engineer - Olympos Hub',
-			description:
-				"We provide integrated solutions for web-based services, taking care of every functional aspect in the realization of our customers' projects: from design to web development, from implementation to the management of networks and hardware devices.",
-			type: 'Work',
-			// date: 'September 2022 - in progress',
-			date: 'September 2023 - December 2023',
-			completed: false,
-			href: 'https://olymposhub.io',
-			linkName: 'Website'
-		},
+		// {
+		// 	title: 'Software Engineer - Olympos Hub',
+		// 	description:
+		// 		"We provide integrated solutions for web-based services, taking care of every functional aspect in the realization of our customers' projects: from design to web development, from implementation to the management of networks and hardware devices.",
+		// 	type: 'Work',
+		// 	date: 'September 2022 - in progress',
+		// 	completed: false,
+		// 	href: 'https://olymposhub.io',
+		// 	linkName: 'Website'
+		// },
 		{
 			title: 'Fullstack Developer Freelance',
 			description:
