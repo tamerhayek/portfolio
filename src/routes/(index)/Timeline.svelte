@@ -15,7 +15,8 @@
 			description:
 				"We provide integrated solutions for web-based services, taking care of every functional aspect in the realization of our customers' projects: from design to web development, from implementation to the management of networks and hardware devices.",
 			type: 'Work',
-			date: 'September 2022 - in progress',
+			// date: 'September 2022 - in progress',
+			date: 'September 2023 - December 2023',
 			completed: false,
 			href: 'https://olymposhub.io',
 			linkName: 'Website'
@@ -25,7 +26,7 @@
 			description:
 				'I am a freelance Full Stack Developer, skilled in creating end-to-end digital solutions, from intuitive frontend development to robust, scalable backend systems. I collaborate with clients to turn their ideas into reality using modern technologies.',
 			type: 'Work',
-			date: 'January 2023 - in progress',
+			date: 'January 2022 - in progress',
 			completed: false
 		},
 		{
