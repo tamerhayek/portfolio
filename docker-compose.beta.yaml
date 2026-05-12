@@ -1,7 +1,7 @@
 services:
   portfolio-demo:
     container_name: portfolio-demo
-    image: ghcr.io/tamerhayek/portfolio:latest
+    image: ghcr.io/tamerhayek/portfolio:beta
     restart: unless-stopped
     networks:
       - proxy
