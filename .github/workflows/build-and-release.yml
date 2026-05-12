@@ -35,6 +35,8 @@ jobs:
             type=sha,prefix=,format=short
             type=semver,pattern={{version}}
             type=semver,pattern=v{{version}}
+          labels: |
+            org.opencontainers.image.description=Personal portfolio — terminal aesthetic, self-hosted on Hetzner behind Traefik.
 
       - uses: docker/setup-qemu-action@v3
 
@@ -49,6 +51,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          annotations: ${{ steps.meta.outputs.annotations }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
