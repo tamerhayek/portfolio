@@ -1,4 +1,4 @@
-name: CI
+name: Build and Deploy
 
 env:
   REGISTRY: ghcr.io
@@ -24,6 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
 
       - name: Read pnpm version from package.json
         id: pnpmv
