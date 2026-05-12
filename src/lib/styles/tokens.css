@@ -1,0 +1,37 @@
+/* ============================================================
+   tamerhayek.com — design tokens
+   ============================================================ */
+
+:root {
+  /* ── Backgrounds ─────────────────────────────── */
+  --background:    #0a0a0a;   /* sfondo principale della pagina */
+  --surface:       #0f0f0f;   /* pannelli, card, terminali */
+  --surface-2:     #141414;   /* superfici secondarie (hover, rientranze) */
+
+  /* ── Borders ─────────────────────────────────── */
+  --border:        #1e1e1e;   /* bordi sottili standard */
+  --border-strong: #2a2a2a;   /* bordi evidenziati (hover) */
+
+  /* ── Text ────────────────────────────────────── */
+  --text:          #e2e8f0;   /* testo principale */
+  --text-muted:    #6b6b6b;   /* testo secondario, label, metadati */
+  --text-dim:      #8a8a8a;   /* testo terziario, icone inattive */
+
+  /* ── Brand / Accent ──────────────────────────── */
+  --primary:       #ff3e00;   /* arancione Svelte — CTA, accenti principali */
+  --secondary:     #00d97e;   /* verde terminale — stato online, successi */
+
+  /* ── Syntax / UI colors ──────────────────────── */
+  --color-yellow:  #ffd60a;   /* warning, git hash, flag */
+  --color-blue:    #4dabf7;   /* hostname, keyword, link */
+  --color-magenta: #d886ff;   /* path, numero, variabile */
+  --color-red:     #ff6b6b;   /* errori */
+
+  /* ── Layout ──────────────────────────────────── */
+  --nav-h:          61px;        /* fixed nav height — used by sticky prompt */
+  --prompt-bar-h:   42px;        /* section sticky prompt bar height */
+
+  /* ── Typography ──────────────────────────────── */
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "Inter Variable", "Inter", system-ui, -apple-system, sans-serif;
+}

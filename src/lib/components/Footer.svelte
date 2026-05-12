@@ -1,26 +1,9 @@
-<script lang="ts">
-	import { Icon } from '@steeze-ui/svelte-icon';
-	import { BrandDiscord, BrandTelegram, Mail } from '@steeze-ui/tabler-icons';
-</script>
-
-<footer class="w-full py-10">
-	<div class="flex flex-col items-center justify-center gap-5">
-		<p>
-			©{new Date().getFullYear()} Tamer Hayek
-		</p>
-		<div class="flex gap-10 pb-5">
-			<a href="mailto:dev@tamerhayek.com">
-				<Icon src={Mail} size="30px" class="transition-all hover:scale-110" />
-				<span class="sr-only">Mail</span>
-			</a>
-			<a target="_blank" href="https://tamerhayek.com/telegram">
-				<Icon src={BrandTelegram} size="30px" class="transition-all hover:scale-110" />
-				<span class="sr-only">Telegram</span>
-			</a>
-			<a target="_blank" href="https://tamerhayek.com/discord">
-				<Icon src={BrandDiscord} size="30px" class="transition-all hover:scale-110" />
-				<span class="sr-only">Discord</span>
-			</a>
+<footer>
+	<div class="wrap foot-inner">
+		<div class="left">
+			<span class="ok">●</span>
+			<span>built by hand in Rome. sveltekit · self-hosted</span>
 		</div>
+		<div>© {new Date().getFullYear()} tamerhayek.com · <span style="color: var(--secondary)">exit 0</span></div>
 	</div>
 </footer>

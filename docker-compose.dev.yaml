@@ -4,10 +4,6 @@ services:
     build:
       context: ./
       dockerfile: ./Dockerfile
-      args:
-        - PUBLIC_UMAMI_WEBSITE_ID=${PUBLIC_UMAMI_WEBSITE_ID:-""}
-    environment:
-      - PUBLIC_UMAMI_WEBSITE_ID=${PUBLIC_UMAMI_WEBSITE_ID:-""}
     restart: unless-stopped
     ports:
       - 3000:3000

@@ -1,9 +1,31 @@
+# VCS / editor / OS
+.git
+.gitignore
+.vscode
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+
+# Dependencies (reinstalled during build)
 node_modules
-.pnpm-store
+
+# SvelteKit / Vite outputs
 .svelte-kit
 build
 dist
-.git
-.vscode
-.DS_Store
-.env
+.vite
+.cache
+
+# Logs and temp files
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Docker compose files (not part of the image)
+docker-compose*.yml
+
+# Project-specific exclusions
+README.md

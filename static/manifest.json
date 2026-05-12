@@ -1,5 +1,11 @@
 {
-	"name": "Tamer Hayek Portfolio",
+	"name": "Tamer Hayek",
+	"short_name": "tamerhayek",
+	"description": "Freelance full-stack engineer based in Rome",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#0a0a0a",
+	"theme_color": "#ff3e00",
 	"icons": [
 		{
 			"src": "\/android-icon-36x36.png",

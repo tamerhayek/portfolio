@@ -1,0 +1,15 @@
+@import '@fontsource-variable/jetbrains-mono';
+@import '@fontsource-variable/inter';
+@import './tokens.css';
+@import './reset.css';
+@import './layout.css';
+@import './components/nav.css';
+@import './components/hero.css';
+@import './components/terminal.css';
+@import './components/stack.css';
+@import './components/projects.css';
+@import './components/about.css';
+@import './components/talks.css';
+@import './components/contact.css';
+@import './components/footer.css';
+@import './components/animations.css';
