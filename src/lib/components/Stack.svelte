@@ -13,8 +13,8 @@
 				{ name: 'TypeScript', color: '#3178c6' },
 				{ name: 'JavaScript', color: '#f7df1e' },
 				{ name: 'HTML', color: '#e34f26' },
-				{ name: 'CSS', color: '#1572b6' },
-			],
+				{ name: 'CSS', color: '#1572b6' }
+			]
 		},
 		{
 			category: 'backend',
@@ -24,8 +24,8 @@
 				{ name: 'Node.js', color: '#5fa04e' },
 				{ name: 'Go', color: '#00add8' },
 				{ name: 'PostgreSQL', color: '#336791' },
-				{ name: 'PocketBase', color: '#b6c4d1' },
-			],
+				{ name: 'PocketBase', color: '#b6c4d1' }
+			]
 		},
 		{
 			category: 'infra',
@@ -34,9 +34,9 @@
 				{ name: 'Docker', color: '#2496ed' },
 				{ name: 'Linux', color: '#ffd60a' },
 				{ name: 'Traefik', color: '#24a1c1' },
-				{ name: 'Hetzner', color: '#d50c2d' },
-			],
-		},
+				{ name: 'Hetzner', color: '#d50c2d' }
+			]
+		}
 	];
 </script>
 
@@ -54,7 +54,9 @@
 
 			<div class="term">
 				<div class="term-bar">
-					<div class="lights"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+					<div class="lights">
+						<span class="r"></span><span class="y"></span><span class="g"></span>
+					</div>
 					<div class="term-title">~ / stack.txt · 1 of 1</div>
 					<div class="term-tabs"><span>UTF-8</span><span>LF</span></div>
 				</div>
@@ -64,14 +66,20 @@
 						<span class="com"># a non-exhaustive list of what i reach for</span>
 					</div>
 					<div class="out">
-						<span class="key">runtime</span><span class="pun">: </span><span class="str">"linux · macos · arm/x86"</span>
+						<span class="key">runtime</span><span class="pun">: </span><span class="str"
+							>"linux · macos · arm/x86"</span
+						>
 					</div>
 					<div class="out">
-						<span class="key">years</span><span class="pun">: </span><span class="num">6</span><span class="pun">,</span>
+						<span class="key">years</span><span class="pun">: </span><span class="num">6</span><span
+							class="pun">,</span
+						>
 						<span class="com"> # full-stack, ops, occasional design</span>
 					</div>
 					<div class="out">
-						<span class="key">approach</span><span class="pun">: </span><span class="str">"ship fast, self-host, sweat the details"</span>
+						<span class="key">approach</span><span class="pun">: </span><span class="str"
+							>"ship fast, self-host, sweat the details"</span
+						>
 					</div>
 				</div>
 			</div>

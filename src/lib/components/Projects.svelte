@@ -6,7 +6,7 @@
 		ImageProjectsClarisseGrosseto,
 		ImageProjectsIlGenioTestardo,
 		ImageProjectsGlaStablesEquitazione,
-		ImageProjectsPonySeries,
+		ImageProjectsPonySeries
 	} from '$lib/assets/images/projects';
 
 	interface Project {
@@ -33,7 +33,7 @@
 			tags: ['SvelteKit', 'Docker'],
 			status: 'deployed',
 			live: 'https://tamerhayek.com',
-			repo: 'https://github.com/tamerhayek/portfolio',
+			repo: 'https://github.com/tamerhayek/portfolio'
 		},
 		{
 			idx: 2,
@@ -44,7 +44,7 @@
 			tags: ['SvelteKit', 'Docker'],
 			status: 'live',
 			live: 'https://olymposhub.io',
-			repo: null,
+			repo: null
 		},
 		{
 			idx: 3,
@@ -55,7 +55,7 @@
 			tags: ['SvelteKit', 'PocketBase', 'Docker'],
 			status: 'in prod',
 			live: 'https://clarissegrosseto.it',
-			repo: null,
+			repo: null
 		},
 		{
 			idx: 4,
@@ -66,7 +66,7 @@
 			tags: ['SvelteKit', 'Docker'],
 			status: 'live',
 			live: 'https://ilgeniotestardo.org',
-			repo: null,
+			repo: null
 		},
 		{
 			idx: 5,
@@ -77,7 +77,7 @@
 			tags: ['SvelteKit', 'Docker'],
 			status: 'live',
 			live: 'https://glastablesequitazione.com',
-			repo: null,
+			repo: null
 		},
 		{
 			idx: 6,
@@ -88,8 +88,8 @@
 			tags: ['SvelteKit', 'Docker'],
 			status: 'in prod',
 			live: 'https://ponyseries.com',
-			repo: null,
-		},
+			repo: null
+		}
 	];
 
 	function padIdx(n: number) {
@@ -103,7 +103,11 @@
 </script>
 
 <section id="projects">
-	<SectionPrompt step="03/06" command="ls ./projects/ --sort=recent" onActivate={() => (active = true)} />
+	<SectionPrompt
+		step="03/06"
+		command="ls ./projects/ --sort=recent"
+		onActivate={() => (active = true)}
+	/>
 	<div class="wrap">
 		<div class="sec-body" class:in={active}>
 			<div class="section-head">
@@ -144,17 +148,33 @@
 							</div>
 							<div class="proj-foot">
 								{#if p.live}
-									<a href={p.live} target="_blank" rel="noopener noreferrer">
+									<a href={p.live} target="_blank" rel="noopener noreferrer external">
 										live
-										<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<svg
+											viewBox="0 0 24 24"
+											width="14"
+											height="14"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
 											<path d="M5 12h14" /><path d="m13 6 6 6-6 6" />
 										</svg>
 									</a>
 								{/if}
 								{#if p.repo}
-									<a href={p.repo} target="_blank" rel="noopener noreferrer">
+									<a href={p.repo} target="_blank" rel="noopener noreferrer external">
 										source
-										<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8">
+										<svg
+											viewBox="0 0 24 24"
+											width="14"
+											height="14"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.8"
+										>
 											<path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 1 0-7-7l-1 1" />
 											<path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 1 0 7 7l1-1" />
 										</svg>

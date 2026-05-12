@@ -22,7 +22,7 @@
 		showCursor = true,
 		cursorSolid = false,
 		onDone,
-		startDelay = 0,
+		startDelay = 0
 	}: Props = $props();
 
 	let typed = $state('');
@@ -58,7 +58,8 @@
 
 <div class="prompt">
 	<span class="user">{user}</span><span class="at">@</span><span class="host">{host}</span><span
-		class="sym">:</span><span class="path">{path}</span><span class="sym"> $</span><span
-		class="cmd"> {displayText}</span>{#if showCursor}<span
-		class="cursor{cursorSolid ? ' solid' : ''}"></span>{/if}
+		class="sym">:</span
+	><span class="path">{path}</span><span class="sym"> $</span><span class="cmd">
+		{displayText}</span
+	>{#if showCursor}<span class="cursor{cursorSolid ? ' solid' : ''}"></span>{/if}
 </div>

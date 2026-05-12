@@ -42,6 +42,7 @@ src/
       Navbar.svelte               # fixed nav with brand + section links + social icons
       Footer.svelte               # minimal footer
       Prompt.svelte               # ANSI shell prompt (instant or typewriter)
+      SectionPrompt.svelte        # sticky prompt bar — IntersectionObserver via {@attach}
       Hero.svelte                 # animated hero: typewriter + role cycler
       Stack.svelte                # tech stack grid
       Projects.svelte             # project cards with real screenshots
@@ -76,24 +77,24 @@ static/
 
 CSS custom properties defined in `src/lib/styles/tokens.css`:
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--background` | `#0a0a0a` | page background |
-| `--surface` | `#0f0f0f` | panels, cards, terminals |
-| `--surface-2` | `#141414` | hover states, insets |
-| `--border` | `#1e1e1e` | default borders |
-| `--border-strong` | `#2a2a2a` | hover borders |
-| `--text` | `#e2e8f0` | primary text |
-| `--text-muted` | `#6b6b6b` | labels, metadata |
-| `--text-dim` | `#8a8a8a` | inactive icons |
-| `--primary` | `#ff3e00` | Svelte orange — CTA, accents |
-| `--secondary` | `#00d97e` | terminal green — online status |
-| `--color-yellow` | `#ffd60a` | warning, git hash |
-| `--color-blue` | `#4dabf7` | hostname, keyword |
-| `--color-magenta` | `#d886ff` | path, variable |
-| `--color-red` | `#ff6b6b` | errors |
-| `--font-mono` | JetBrains Mono Variable | all body text |
-| `--font-sans` | Inter Variable | project descriptions |
+| Token             | Value                   | Usage                          |
+| ----------------- | ----------------------- | ------------------------------ |
+| `--background`    | `#0a0a0a`               | page background                |
+| `--surface`       | `#0f0f0f`               | panels, cards, terminals       |
+| `--surface-2`     | `#141414`               | hover states, insets           |
+| `--border`        | `#1e1e1e`               | default borders                |
+| `--border-strong` | `#2a2a2a`               | hover borders                  |
+| `--text`          | `#e2e8f0`               | primary text                   |
+| `--text-muted`    | `#6b6b6b`               | labels, metadata               |
+| `--text-dim`      | `#8a8a8a`               | inactive icons                 |
+| `--primary`       | `#ff3e00`               | Svelte orange — CTA, accents   |
+| `--secondary`     | `#00d97e`               | terminal green — online status |
+| `--color-yellow`  | `#ffd60a`               | warning, git hash              |
+| `--color-blue`    | `#4dabf7`               | hostname, keyword              |
+| `--color-magenta` | `#d886ff`               | path, variable                 |
+| `--color-red`     | `#ff6b6b`               | errors                         |
+| `--font-mono`     | JetBrains Mono Variable | all body text                  |
+| `--font-sans`     | Inter Variable          | project descriptions           |
 
 ---
 
@@ -103,7 +104,30 @@ CSS custom properties defined in `src/lib/styles/tokens.css`:
 - **`$derived`** — computed values that depend on props (`displayText = $derived(instant ? command : typed)`)
 - **`$effect`** — reactive side effects with cleanup (role cycler in Hero)
 - **`onMount`** — imperative lifecycle (typewriter animation in Prompt)
+- **`{@attach fn}`** — element-level lifecycle used in `SectionPrompt` to observe the parent `<section>` with IntersectionObserver without `bind:this`
 - **`use:reveal`** — custom Svelte action for IntersectionObserver scroll-in animations
+
+---
+
+## CI / CD
+
+Two GitHub Actions workflows build and push Docker images to GHCR (`ghcr.io/tamerhayek/portfolio`):
+
+| Workflow                  | Trigger            | Tags produced                                                                                     |
+| ------------------------- | ------------------ | ------------------------------------------------------------------------------------------------- |
+| `build-and-deploy-svelte` | push to any branch | `sha-<short>` always; `latest` on `main`; `beta` on `beta` branch. Auto-deploys to VPS on `main`. |
+| `build-and-release`       | push of `v*` tag   | semver tags (`v1.2.3`, `1.2`, `1`). Also creates a GitHub Release with changelog.                 |
+
+Images are multi-platform (`linux/amd64`, `linux/arm64`).
+
+Compose files:
+
+| File                       | Purpose                                                         |
+| -------------------------- | --------------------------------------------------------------- |
+| `docker-compose.yaml`      | plain — pulls from GHCR, ports exposed                          |
+| `docker-compose.prod.yaml` | production — Traefik labels for `tamerhayek.com`                |
+| `docker-compose.beta.yaml` | staging — Traefik labels for `demo.tamerhayek.com`, `:beta` tag |
+| `docker-compose.dev.yaml`  | local dev — builds from Dockerfile                              |
 
 ---
 
@@ -125,13 +149,13 @@ pnpm format       # Prettier format
 
 Short redirect routes for all contact links:
 
-| Route | Destination |
-|-------|-------------|
-| `/github` | github.com/tamerhayek |
-| `/linkedin` | linkedin.com/in/tamerhayek |
-| `/instagram` | instagram.com/tamerhayek |
-| `/threads` | threads.com/@tamerhayek |
-| `/x` | x.com/tamibyte |
-| `/reddit` | reddit.com/user/tamibyte |
-| `/discord` | discord.com/users/tamerhayek |
-| `/telegram` | t.me/tamibyte |
+| Route        | Destination                  |
+| ------------ | ---------------------------- |
+| `/github`    | github.com/tamerhayek        |
+| `/linkedin`  | linkedin.com/in/tamerhayek   |
+| `/instagram` | instagram.com/tamerhayek     |
+| `/threads`   | threads.com/@tamerhayek      |
+| `/x`         | x.com/tamibyte               |
+| `/reddit`    | reddit.com/user/tamibyte     |
+| `/discord`   | discord.com/users/tamerhayek |
+| `/telegram`  | t.me/tamibyte                |

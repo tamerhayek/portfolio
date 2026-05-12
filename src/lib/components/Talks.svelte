@@ -12,14 +12,18 @@
 			date: '2025',
 			links: [
 				{ label: 'slides', href: 'https://iusesveltebtw.romajs.tamerhayek.com/', icon: 'doc' },
-				{ label: 'recording', href: 'https://www.youtube.com/watch?v=iJCrS9E9dZE', icon: 'play' },
-			],
-		},
+				{ label: 'recording', href: 'https://www.youtube.com/watch?v=iJCrS9E9dZE', icon: 'play' }
+			]
+		}
 	];
 </script>
 
 <section id="talks">
-	<SectionPrompt step="05/06" command="git log --oneline --talks" onActivate={() => (active = true)} />
+	<SectionPrompt
+		step="05/06"
+		command="git log --oneline --talks"
+		onActivate={() => (active = true)}
+	/>
 	<div class="wrap">
 		<div class="sec-body" class:in={active}>
 			<div class="section-head">
@@ -38,14 +42,22 @@
 							<div class="title">{entry.title}</div>
 							<div class="meta">
 								<span class="tag">{entry.tag}</span>
-								{entry.meta} <span style="color: var(--text-dim)">·</span> {entry.date}
+								{entry.meta} <span style="color: var(--text-dim)">·</span>
+								{entry.date}
 							</div>
 						</div>
 						<div class="git-actions">
 							{#each entry.links as lk (lk.label)}
-								<a href={lk.href} target="_blank" rel="noopener noreferrer">
+								<a href={lk.href} target="_blank" rel="noopener noreferrer external">
 									{#if lk.icon === 'doc'}
-										<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8">
+										<svg
+											viewBox="0 0 24 24"
+											width="12"
+											height="12"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.8"
+										>
 											<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
 											<path d="M14 3v5h5" />
 										</svg>

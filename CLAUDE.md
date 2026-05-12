@@ -31,29 +31,30 @@ src/lib/styles/
     talks.css         ← .git-log, .git-row, .git-hash, .git-msg, .git-actions
     contact.css       ← .contact-term, .contact-grid, .contact-card
     footer.css        ← footer, .foot-inner
-    animations.css    ← .reveal/.reveal.in, .kbd, delay classes
+    animations.css    ← .sec-body/.sec-body.in reveal, .reveal/.reveal.in, .kbd, delay classes
 ```
 
 ### Components (`src/lib/components/`)
 
 All exported via `index.ts` barrel.
 
-| Component | Description |
-|-----------|-------------|
-| `Navbar.svelte` | Fixed nav — brand dot + section anchor links + GitHub/LinkedIn/X icons (SVG inline) |
-| `Footer.svelte` | Minimal footer with "built by hand in Rome" text |
-| `Prompt.svelte` | ANSI shell prompt — `instant` prop for static display, typewriter animation otherwise. Uses `$derived(instant ? command : typed)` |
-| `Hero.svelte` | Animated hero: typewriter prompt → name reveal → role cycler (state machine via `$effect`) |
-| `Stack.svelte` | Tech stack grid: frontend / backend / infra categories with colored tool pills |
-| `Projects.svelte` | 6 project cards with real WebP screenshots from `$lib/assets/images/projects/` |
-| `About.svelte` | `about.yaml` terminal block + stat card + interests list |
-| `Talks.svelte` | Git log–styled talks list |
-| `Contact.svelte` | 8 social contact cards (GitHub, LinkedIn, Instagram, Threads, X, Reddit, Discord, Telegram) |
+| Component              | Description                                                                                                                       |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `Navbar.svelte`        | Fixed nav — brand dot + section anchor links + GitHub/LinkedIn/X icons (SVG inline)                                               |
+| `Footer.svelte`        | Minimal footer with "built by hand in Rome" text                                                                                  |
+| `Prompt.svelte`        | ANSI shell prompt — `instant` prop for static display, typewriter animation otherwise. Uses `$derived(instant ? command : typed)` |
+| `SectionPrompt.svelte` | Sticky prompt bar per section — uses `{@attach}` to observe parent `<section>` with IntersectionObserver, fires `onActivate`      |
+| `Hero.svelte`          | Animated hero: typewriter prompt → name reveal → role cycler (state machine via `$effect`)                                        |
+| `Stack.svelte`         | Tech stack grid: frontend / backend / infra categories with colored tool pills                                                    |
+| `Projects.svelte`      | 6 project cards with real WebP screenshots from `$lib/assets/images/projects/`                                                    |
+| `About.svelte`         | `about.yaml` terminal block + stat card + interests list                                                                          |
+| `Talks.svelte`         | Git log–styled talks list                                                                                                         |
+| `Contact.svelte`       | 8 social contact cards (GitHub, LinkedIn, Instagram, Threads, X, Reddit, Discord, Telegram)                                       |
 
 ### Actions (`src/lib/actions/`)
 
-| Action | Usage |
-|--------|-------|
+| Action   | Usage                                                                                                                                                                            |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `reveal` | `use:reveal={delay}` — adds `.reveal` + `.delay-N` classes, fires IntersectionObserver to add `.in` when element enters viewport. Threshold 0.12, rootMargin `0px 0px -40px 0px` |
 
 ### Routes
@@ -81,6 +82,7 @@ All in `src/routes/(links)/` — each is a `+server.ts` returning `redirect(303,
 - **Effects**: `$effect(() => { ...; return () => cleanup(); })` for reactive side effects
 - **Lifecycle**: `onMount` for imperative setup (timers, DOM-dependent logic)
 - **Actions**: `use:actionName={param}` — action function in `src/lib/actions/`
+- **Attachments**: `{@attach fn}` — Svelte 5 element-level lifecycle, used in `SectionPrompt` to observe the parent `<section>` without needing a `bind:this`. Return a cleanup function.
 - **No `createEventDispatcher`**: use callback props (`onDone?: () => void`) instead
 - **No `$:` reactive statements**: use `$derived` or `$effect`
 
@@ -96,6 +98,23 @@ pnpm lint         # eslint + prettier check
 pnpm format       # prettier write
 ```
 
+Always run `pnpm format && pnpm lint && pnpm check` before confirming any changes.
+
+---
+
+## Lint: svelte/no-navigation-without-resolve
+
+- **Internal paths** (`href="/"`, `href="/#section"`): wrap with `resolve()` from `$app/paths`
+  ```svelte
+  import {resolve} from '$app/paths';
+  <a href={resolve('/')}>home</a>
+  ```
+- **External dynamic hrefs** (`href={variable}` pointing to `https://...`): add `external` to `rel`
+  ```svelte
+  <a href={url} rel="noopener noreferrer external">link</a>
+  ```
+- **Static external literals** (`href="https://..."`) are already allowed — no change needed.
+
 ---
 
 ## Available Svelte MCP Tools
@@ -103,13 +122,17 @@ pnpm format       # prettier write
 The Svelte MCP server is configured — use it for any Svelte/SvelteKit work.
 
 ### 1. list-sections
+
 Use FIRST to discover documentation sections. Always call before writing Svelte code.
 
 ### 2. get-documentation
+
 Fetch full docs for relevant sections found via `list-sections`.
 
 ### 3. svelte-autofixer
+
 Analyze Svelte components for issues. Call before finalizing any `.svelte` file. Keep calling until no issues are returned.
 
 ### 4. playground-link
+
 Generate a Svelte Playground link. Only after user confirmation, never when code was written to project files.

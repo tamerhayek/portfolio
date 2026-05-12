@@ -6,7 +6,7 @@
 		'Software Engineer',
 		'Full Stack Developer',
 		'DevOps Engineer',
-		'Self-Hosted Everything',
+		'Self-Hosted Everything'
 	];
 
 	let showName = $state(false);
@@ -101,7 +101,16 @@
 
 	<a class="hero-scroll" href="#stack">
 		scroll
-		<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<svg
+			viewBox="0 0 24 24"
+			width="14"
+			height="14"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		>
 			<path d="M12 5v14" />
 			<path d="m6 13 6 6 6-6" />
 		</svg>

@@ -1,7 +1,7 @@
 services:
   portfolio:
     container_name: portfolio
-    image: ghcr.io/tamerhayek/portfolio:latest
+    image: ghcr.io/tamerhayek/portfolio:4.1.2
     restart: unless-stopped
     ports:
       - '3000:3000'

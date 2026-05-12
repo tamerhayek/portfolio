@@ -11,7 +11,7 @@ const urls = [
 	{ loc: 'https://tamerhayek.com/x', priority: '0.70' },
 	{ loc: 'https://tamerhayek.com/reddit', priority: '0.70' },
 	{ loc: 'https://tamerhayek.com/discord', priority: '0.70' },
-	{ loc: 'https://tamerhayek.com/telegram', priority: '0.70' },
+	{ loc: 'https://tamerhayek.com/telegram', priority: '0.70' }
 ];
 
 export const GET: RequestHandler = async () => {

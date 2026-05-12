@@ -1,151 +1,217 @@
 .proj-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 22px;
 }
-@media (max-width: 880px) { .proj-grid { grid-template-columns: 1fr; } }
+@media (max-width: 880px) {
+	.proj-grid {
+		grid-template-columns: 1fr;
+	}
+}
 
 .proj {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex; flex-direction: column;
-  transition: border-color .2s, transform .2s;
-  position: relative;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition:
+		border-color 0.2s,
+		transform 0.2s;
+	position: relative;
 }
-.proj:hover { border-color: var(--primary); transform: translateY(-3px); }
+.proj:hover {
+	border-color: var(--primary);
+	transform: translateY(-3px);
+}
 .proj:hover .proj-art .glitch::before,
-.proj:hover .proj-art .glitch::after { opacity: 0.55; }
-.proj:hover .proj-art .scan { opacity: 0.7; }
+.proj:hover .proj-art .glitch::after {
+	opacity: 0.55;
+}
+.proj:hover .proj-art .scan {
+	opacity: 0.7;
+}
 
 .proj-bar {
-  display: flex; align-items: center; gap: 10px;
-  padding: 9px 12px;
-  background: #131313;
-  border-bottom: 1px solid var(--border);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 9px 12px;
+	background: #131313;
+	border-bottom: 1px solid var(--border);
 }
 .proj-bar .file {
-  font-size: 11px; color: var(--text-muted);
-  font-family: var(--font-mono);
+	font-size: 11px;
+	color: var(--text-muted);
+	font-family: var(--font-mono);
 }
-.proj-bar .file .ext { color: var(--secondary); }
-.proj-bar .right { margin-left: auto; font-size: 10px; color: var(--text-muted); letter-spacing: 0.08em; }
+.proj-bar .file .ext {
+	color: var(--secondary);
+}
+.proj-bar .right {
+	margin-left: auto;
+	font-size: 10px;
+	color: var(--text-muted);
+	letter-spacing: 0.08em;
+}
 
 .proj-art {
-  height: 220px;
-  position: relative;
-  overflow: hidden;
-  background: #0c0c0c;
-  border-bottom: 1px solid var(--border);
+	height: 220px;
+	position: relative;
+	overflow: hidden;
+	background: #0c0c0c;
+	border-bottom: 1px solid var(--border);
 }
-.proj-art .glitch { position: absolute; inset: 0; }
+.proj-art .glitch {
+	position: absolute;
+	inset: 0;
+}
 .proj-art .glitch::before,
 .proj-art .glitch::after {
-  content: "";
-  position: absolute; inset: 0;
-  opacity: 0;
-  transition: opacity .25s;
-  mix-blend-mode: screen;
-  pointer-events: none;
+	content: '';
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	transition: opacity 0.25s;
+	mix-blend-mode: screen;
+	pointer-events: none;
 }
 .proj-art .glitch::before {
-  background: linear-gradient(transparent 0 49%, rgba(255,62,0,0.5) 49% 51%, transparent 51%);
-  background-size: 100% 8px;
-  animation: glitch-x 1.6s steps(20) infinite;
+	background: linear-gradient(transparent 0 49%, rgba(255, 62, 0, 0.5) 49% 51%, transparent 51%);
+	background-size: 100% 8px;
+	animation: glitch-x 1.6s steps(20) infinite;
 }
 .proj-art .glitch::after {
-  background: linear-gradient(transparent 0 49%, rgba(0,217,126,0.4) 49% 51%, transparent 51%);
-  background-size: 100% 6px;
-  animation: glitch-x 2.3s steps(20) infinite reverse;
+	background: linear-gradient(transparent 0 49%, rgba(0, 217, 126, 0.4) 49% 51%, transparent 51%);
+	background-size: 100% 6px;
+	animation: glitch-x 2.3s steps(20) infinite reverse;
 }
 .proj-art .scan {
-  position: absolute; inset: 0;
-  opacity: 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.06) 0 1px,
-    transparent 1px 3px
-  );
-  pointer-events: none;
-  transition: opacity .25s;
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	background: repeating-linear-gradient(
+		to bottom,
+		rgba(255, 255, 255, 0.06) 0 1px,
+		transparent 1px 3px
+	);
+	pointer-events: none;
+	transition: opacity 0.25s;
 }
 @keyframes glitch-x {
-  0%   { transform: translateX(0); }
-  20%  { transform: translateX(-3px); }
-  40%  { transform: translateX(2px); }
-  60%  { transform: translateX(-1px); }
-  100% { transform: translateX(0); }
+	0% {
+		transform: translateX(0);
+	}
+	20% {
+		transform: translateX(-3px);
+	}
+	40% {
+		transform: translateX(2px);
+	}
+	60% {
+		transform: translateX(-1px);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }
 
 .proj-body {
-  padding: 18px 18px 20px;
-  display: flex; flex-direction: column; gap: 12px;
+	padding: 18px 18px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 }
 .proj-title {
-  display: flex; align-items: baseline; gap: 12px;
-  font-family: var(--font-mono);
-  font-size: 18px; font-weight: 600;
-  color: var(--text);
+	display: flex;
+	align-items: baseline;
+	gap: 12px;
+	font-family: var(--font-mono);
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--text);
 }
-.proj-title .num { color: var(--primary); font-size: 12px; }
+.proj-title .num {
+	color: var(--primary);
+	font-size: 12px;
+}
 .proj-desc {
-  color: var(--text-dim);
-  font-size: 13px;
-  line-height: 1.6;
-  font-family: var(--font-sans);
+	color: var(--text-dim);
+	font-size: 13px;
+	line-height: 1.6;
+	font-family: var(--font-sans);
 }
 .proj-tags {
-  display: flex; flex-wrap: wrap; gap: 6px;
-  font-size: 11px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	font-size: 11px;
 }
 .proj-tags span {
-  padding: 4px 8px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--text-dim);
+	padding: 4px 8px;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	color: var(--text-dim);
 }
 .proj-foot {
-  display: flex; align-items: center; gap: 18px;
-  font-size: 12px;
-  color: var(--text-muted);
-  padding-top: 8px;
-  border-top: 1px dashed var(--border);
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	font-size: 12px;
+	color: var(--text-muted);
+	padding-top: 8px;
+	border-top: 1px dashed var(--border);
 }
 .proj-foot a {
-  display: inline-flex; align-items: center; gap: 6px;
-  color: var(--secondary);
-  transition: color .15s;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: var(--secondary);
+	transition: color 0.15s;
 }
-.proj-foot a:hover { color: var(--primary); }
+.proj-foot a:hover {
+	color: var(--primary);
+}
 
-.shot { position: absolute; inset: 0; padding: 18px; font-family: var(--font-mono); font-size: 10px; }
-.shot .row { display: block; }
+.shot {
+	position: absolute;
+	inset: 0;
+	padding: 18px;
+	font-family: var(--font-mono);
+	font-size: 10px;
+}
+.shot .row {
+	display: block;
+}
 
 .shot-img {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  background: #0c0c0c;
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	background: #0c0c0c;
 }
 .shot-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-  filter: saturate(0.92) contrast(1.04);
-  transition: transform .5s ease, filter .3s ease;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top center;
+	display: block;
+	filter: saturate(0.92) contrast(1.04);
+	transition:
+		transform 0.5s ease,
+		filter 0.3s ease;
 }
 .proj:hover .shot-img img {
-  transform: scale(1.04);
-  filter: saturate(1.05) contrast(1.06);
+	transform: scale(1.04);
+	filter: saturate(1.05) contrast(1.06);
 }
 .shot-img-tint {
-  position: absolute; inset: 0;
-  background:
-    linear-gradient(to bottom, rgba(10,10,10,0) 60%, rgba(10,10,10,0.55) 100%),
-    radial-gradient(ellipse at 50% 100%, rgba(255,62,0,0.08), transparent 60%);
-  pointer-events: none;
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(to bottom, rgba(10, 10, 10, 0) 60%, rgba(10, 10, 10, 0.55) 100%),
+		radial-gradient(ellipse at 50% 100%, rgba(255, 62, 0, 0.08), transparent 60%);
+	pointer-events: none;
 }
