@@ -1,8 +1,7 @@
 services:
-  website:
-    build:
-      context: ./
-      dockerfile: ./Dockerfile
+  portfolio-demo:
+    container_name: portfolio-demo
+    image: ghcr.io/tamerhayek/portfolio:latest
     restart: unless-stopped
     networks:
       - proxy

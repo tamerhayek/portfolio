@@ -1,35 +1,13 @@
 services:
-  website:
-    build:
-      context: ./
-      dockerfile: ./Dockerfile
+  portfolio:
+    container_name: portfolio
+    image: ghcr.io/tamerhayek/portfolio:latest
     restart: unless-stopped
-    networks:
-      - proxy
-    labels:
-      - traefik.enable=true
-      - traefik.docker.network=proxy
-      - traefik.http.services.portfolio.loadbalancer.server.port=3000
-
-      # --- tamerhayek.com ---
-      - traefik.http.routers.portfolio.rule=Host(`tamerhayek.com`)
-      - traefik.http.routers.portfolio.entrypoints=websecure
-      - traefik.http.routers.portfolio.tls=true
-      - traefik.http.routers.portfolio.tls.certresolver=letsencrypt
-
-      # --- Router redirect (www.tamerhayek.com -> tamerhayek.com) ---
-      - traefik.http.routers.portfolio-www.rule=Host(`www.tamerhayek.com`)
-      - traefik.http.routers.portfolio-www.entrypoints=websecure
-      - traefik.http.routers.portfolio-www.tls=true
-      - traefik.http.routers.portfolio-www.tls.certresolver=letsencrypt
-      - traefik.http.routers.portfolio-www.middlewares=redirect-www-to-non-www
+    ports:
+      - '3000:3000'
     healthcheck:
       test: wget --no-verbose --tries=1 --spider http://127.0.0.1:3000 || exit 1
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 5s
-
-networks:
-  proxy:
-    external: true
