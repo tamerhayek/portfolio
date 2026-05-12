@@ -57,6 +57,16 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-tags: true
+
+      - name: Detect version tag on this commit
+        id: vtag
+        run: |
+          TAG=$(git tag --points-at HEAD | grep '^v' | sort -V | tail -1)
+          echo "tag=${TAG}" >> $GITHUB_OUTPUT
+          echo "version=${TAG#v}" >> $GITHUB_OUTPUT
+          echo "has_tag=$([[ -n "$TAG" ]] && echo true || echo false)" >> $GITHUB_OUTPUT
 
       - name: Log in to the Container registry
         uses: docker/login-action@v3
@@ -75,6 +85,8 @@ jobs:
             type=sha,prefix=,format=short
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
             type=raw,value=beta,enable=${{ github.ref == 'refs/heads/beta' }}
+            type=raw,value=${{ steps.vtag.outputs.tag }},enable=${{ steps.vtag.outputs.has_tag == 'true' }}
+            type=raw,value=${{ steps.vtag.outputs.version }},enable=${{ steps.vtag.outputs.has_tag == 'true' }}
           labels: |
             org.opencontainers.image.description=Personal portfolio — terminal aesthetic, self-hosted on Hetzner behind Traefik.
 
