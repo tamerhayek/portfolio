@@ -1,0 +1,40 @@
+name: Cleanup GHCR
+
+env:
+  IMAGE_NAMES: "portfolio"
+
+on:
+  schedule:
+    - cron: '0 3 * * 0'
+  workflow_dispatch:
+
+concurrency:
+  group: cleanup-ghcr-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    name: Prune GHCR
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+      - name: Prune old short-sha tags (keep 20 most recent)
+        uses: snok/container-retention-policy@v3
+        with:
+          account: ${{ github.repository_owner }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          image-names: ${{ env.IMAGE_NAMES }}
+          image-tags: "!latest !beta !v* !*.*.*"
+          tag-selection: tagged
+          cut-off: 30d
+          keep-n-most-recent: 20
+
+      - name: Prune untagged manifests
+        uses: snok/container-retention-policy@v3
+        with:
+          account: ${{ github.repository_owner }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          image-names: ${{ env.IMAGE_NAMES }}
+          tag-selection: untagged
+          cut-off: 1d
