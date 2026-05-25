@@ -1,7 +1,7 @@
 name: Cleanup GHCR
 
 env:
-  IMAGE_NAMES: "portfolio"
+  IMAGE_NAMES: 'portfolio'
 
 on:
   schedule:
@@ -25,7 +25,7 @@ jobs:
           account: ${{ github.repository_owner }}
           token: ${{ secrets.GITHUB_TOKEN }}
           image-names: ${{ env.IMAGE_NAMES }}
-          image-tags: "!latest !beta !v* !*.*.*"
+          image-tags: '!latest !beta !v* !*.*.*'
           tag-selection: tagged
           cut-off: 30d
           keep-n-most-recent: 20
