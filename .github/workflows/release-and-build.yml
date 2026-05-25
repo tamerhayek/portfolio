@@ -1,4 +1,5 @@
 name: Release and build
+run-name: Release and build ${{ github.ref_name }}
 
 env:
   REGISTRY: ghcr.io
