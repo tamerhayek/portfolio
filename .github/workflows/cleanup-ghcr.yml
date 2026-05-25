@@ -1,8 +1,5 @@
 name: Cleanup GHCR
 
-env:
-  IMAGE_NAMES: 'portfolio'
-
 on:
   schedule:
     - cron: '0 3 * * 0'
@@ -19,22 +16,19 @@ jobs:
     permissions:
       packages: write
     steps:
-      - name: Prune old short-sha tags (keep 20 most recent)
-        uses: snok/container-retention-policy@v3.0.1
-        with:
-          account: ${{ github.repository_owner }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          image-names: ${{ env.IMAGE_NAMES }}
-          image-tags: '!latest !beta !v* !*.*.*'
-          tag-selection: tagged
-          cut-off: 30d
-          keep-n-most-recent: 20
-
-      - name: Prune untagged manifests
-        uses: snok/container-retention-policy@v3.0.1
-        with:
-          account: ${{ github.repository_owner }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          image-names: ${{ env.IMAGE_NAMES }}
-          tag-selection: untagged
-          cut-off: 1d
+      - name: Delete untagged and sha-tagged versions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+          PKG: portfolio
+        run: |
+          set -euo pipefail
+          gh api --paginate "/users/$OWNER/packages/container/$PKG/versions" \
+            --jq '.[] | select(
+              (.metadata.container.tags | length == 0) or
+              (.metadata.container.tags | all(test("^[0-9a-f]{7}$")))
+            ) | .id' \
+          | while read -r id; do
+              gh api --method DELETE "/users/$OWNER/packages/container/$PKG/versions/$id"
+              echo "Deleted version $id"
+            done
