@@ -1,4 +1,4 @@
-name: Release
+name: Release and build
 
 env:
   REGISTRY: ghcr.io
