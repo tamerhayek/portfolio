@@ -76,8 +76,6 @@ jobs:
           labels: |
             org.opencontainers.image.description=Personal portfolio — terminal aesthetic, self-hosted on Hetzner behind Traefik.
 
-      - uses: docker/setup-qemu-action@v3
-
       - uses: docker/setup-buildx-action@v3
 
       - name: Build and push
@@ -86,7 +84,7 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           annotations: ${{ steps.meta.outputs.annotations }}
