@@ -28,10 +28,16 @@
 	--color-red: #ff6b6b; /* errori */
 
 	/* ── Layout ──────────────────────────────────── */
-	--nav-h: 61px; /* fixed nav height — used by sticky prompt */
+	--nav-h: 61px; /* fixed nav height — used by sticky prompt; 57px on mobile (see below) */
 	--prompt-bar-h: 42px; /* section sticky prompt bar height */
 
 	/* ── Typography ──────────────────────────────── */
 	--font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
 	--font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (max-width: 700px) {
+	:root {
+		--nav-h: 57px; /* mobile nav: padding 12px top/bottom instead of 14px */
+	}
 }
