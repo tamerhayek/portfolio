@@ -100,7 +100,7 @@
 					</div>
 					<div use:reveal={2}>
 						<div class="about-list">
-							<h4>// what i'm into</h4>
+							<h2>// what i'm into</h2>
 							<ul>
 								<li>self-hosting all the things</li>
 								<li>trading card games &amp; deckbuilding</li>

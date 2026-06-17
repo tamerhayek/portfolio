@@ -148,7 +148,12 @@
 							</div>
 							<div class="proj-foot">
 								{#if p.live}
-									<a href={p.live} target="_blank" rel="noopener noreferrer external">
+									<a
+										href={p.live}
+										target="_blank"
+										rel="noopener noreferrer external"
+										aria-label={`${p.title} — live site`}
+									>
 										live
 										<svg
 											viewBox="0 0 24 24"
@@ -165,7 +170,12 @@
 									</a>
 								{/if}
 								{#if p.repo}
-									<a href={p.repo} target="_blank" rel="noopener noreferrer external">
+									<a
+										href={p.repo}
+										target="_blank"
+										rel="noopener noreferrer external"
+										aria-label={`${p.title} — source code`}
+									>
 										source
 										<svg
 											viewBox="0 0 24 24"

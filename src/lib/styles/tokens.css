@@ -14,7 +14,7 @@
 
 	/* ── Text ────────────────────────────────────── */
 	--text: #e2e8f0; /* testo principale */
-	--text-muted: #6b6b6b; /* testo secondario, label, metadati */
+	--text-muted: #8a8a8a; /* testo secondario, label, metadati (AA: ~5.3:1 su sfondo scuro) */
 	--text-dim: #8a8a8a; /* testo terziario, icone inattive */
 
 	/* ── Brand / Accent ──────────────────────────── */
