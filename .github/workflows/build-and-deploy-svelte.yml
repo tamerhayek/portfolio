@@ -110,4 +110,4 @@ jobs:
           script: |
             set -euo pipefail
             echo "Deploying portfolio (production)..."
-            ~/.local/bin/devops update portfolio
+            ~/.local/bin/olympia update portfolio
