@@ -6,8 +6,11 @@
 		ImageProjectsClarisseGrosseto,
 		ImageProjectsIlGenioTestardo,
 		ImageProjectsGlaStablesEquitazione,
-		ImageProjectsPonySeries
+		ImageProjectsPonySeries,
+		ImageProjectsStudiovisalli
 	} from '$lib/assets/images/projects';
+
+	type ProjectStatus = 'online' | 'offline' | 'soon';
 
 	interface Project {
 		idx: number;
@@ -16,12 +19,18 @@
 		src: string;
 		desc: string;
 		tags: string[];
-		status: string;
+		status: ProjectStatus;
 		live: string | null;
 		repo: string | null;
 	}
 
 	let active = $state(false);
+
+	const statusText: Record<ProjectStatus, string> = {
+		online: 'online',
+		offline: 'offline',
+		soon: 'soon'
+	};
 
 	const projects: Project[] = [
 		{
@@ -30,8 +39,8 @@
 			title: 'tamerhayek.com',
 			src: ImageProjectsPortfolio,
 			desc: 'Terminal-styled personal portfolio, self-hosted on Hetzner behind Traefik. You are looking at it right now.',
-			tags: ['SvelteKit', 'Docker'],
-			status: 'deployed',
+			tags: ['SvelteKit'],
+			status: 'online',
 			live: 'https://tamerhayek.com',
 			repo: 'https://github.com/tamerhayek/portfolio'
 		},
@@ -41,8 +50,8 @@
 			title: 'olymposhub.io',
 			src: ImageProjectsOlymposHub,
 			desc: 'Landing page and digital showcase for a web studio. Design, development, and a solid web presence for clients.',
-			tags: ['SvelteKit', 'Docker'],
-			status: 'live',
+			tags: ['SvelteKit'],
+			status: 'online',
 			live: 'https://olymposhub.io',
 			repo: null
 		},
@@ -52,8 +61,8 @@
 			title: 'clarissegrosseto.it',
 			src: ImageProjectsClarisseGrosseto,
 			desc: 'Full website for a contemporary art museum: artwork collections, custom CMS, on-site monitor kiosks, and an integrated VR tour.',
-			tags: ['SvelteKit', 'PocketBase', 'Docker'],
-			status: 'in prod',
+			tags: ['SvelteKit', 'PocketBase'],
+			status: 'online',
 			live: 'https://clarissegrosseto.it',
 			repo: null
 		},
@@ -63,8 +72,8 @@
 			title: 'ilgeniotestardo.org',
 			src: ImageProjectsIlGenioTestardo,
 			desc: 'Showcase site for a documentary film. Fullscreen hero, embedded trailer, cast and crew sections. A story that deserved a proper site.',
-			tags: ['SvelteKit', 'Docker'],
-			status: 'live',
+			tags: ['SvelteKit'],
+			status: 'online',
 			live: 'https://ilgeniotestardo.org',
 			repo: null
 		},
@@ -74,8 +83,8 @@
 			title: 'glastablesequitazione.com',
 			src: ImageProjectsGlaStablesEquitazione,
 			desc: 'Showcase site for GLA Stables riding school. Lessons, ponies, team. Sections crafted directly with the owners, built for people actually looking for a stable.',
-			tags: ['SvelteKit', 'Docker'],
-			status: 'live',
+			tags: ['SvelteKit'],
+			status: 'online',
 			live: 'https://glastablesequitazione.com',
 			repo: null
 		},
@@ -85,9 +94,20 @@
 			title: 'ponyseries.com',
 			src: ImageProjectsPonySeries,
 			desc: 'Platform for an equestrian competition series: rounds, standings, and registrations. Clean frontend built to be used directly trackside.',
-			tags: ['SvelteKit', 'Docker'],
-			status: 'in prod',
+			tags: ['SvelteKit'],
+			status: 'online',
 			live: 'https://ponyseries.com',
+			repo: null
+		},
+		{
+			idx: 7,
+			file: 'studiovisalli.ts',
+			title: 'studiovisalli.it',
+			src: ImageProjectsStudiovisalli,
+			desc: 'Editorial studio website for Studio Visalli: a refined online presence built around services, culture, and a blog that complements the brand story with thoughtful content.',
+			tags: ['SvelteKit', 'PocketBase'],
+			status: 'online',
+			live: 'https://studiovisalli.it',
 			repo: null
 		}
 	];
@@ -127,7 +147,7 @@
 								<span class="r"></span><span class="y"></span><span class="g"></span>
 							</div>
 							<div class="file">~/projects/{name}<span class="ext">.{ext}</span></div>
-							<div class="right">{p.status}</div>
+							<div class="right">{statusText[p.status]}</div>
 						</header>
 						<div class="proj-art">
 							<div class="shot-img">
@@ -190,7 +210,10 @@
 										</svg>
 									</a>
 								{/if}
-								<span style="margin-left: auto; color: var(--text-muted)">build · passing</span>
+								<span class={`proj-status ${p.status}`}>
+									<span class="status-dot" aria-hidden="true"></span>
+									{statusText[p.status]}
+								</span>
 							</div>
 						</div>
 					</article>

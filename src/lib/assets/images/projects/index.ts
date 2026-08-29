@@ -4,3 +4,4 @@ export { default as ImageProjectsOlymposHub } from '$lib/assets/images/projects/
 export { default as ImageProjectsClarisseGrosseto } from '$lib/assets/images/projects/polo_culturale_le_clarisse.webp';
 export { default as ImageProjectsPonySeries } from '$lib/assets/images/projects/ponyseries.webp';
 export { default as ImageProjectsPortfolio } from '$lib/assets/images/projects/portfolio.webp';
+export { default as ImageProjectsStudiovisalli } from '$lib/assets/images/projects/studiovisalli.webp';
